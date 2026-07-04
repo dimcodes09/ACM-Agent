@@ -9,7 +9,6 @@ import About from "@/components/sections/About";
 import WhyAgenticAI from "@/components/sections/WhyAgenticAI";
 import LearningOutcomes from "@/components/sections/LearningOutcomes";
 import Journey from "@/components/sections/Journey";
-import BuildathonTheme from "@/components/sections/BuildathonTheme";
 import WhyParticipate from "@/components/sections/WhyParticipate";
 import EventStructure from "@/components/sections/EventStructure";
 import RegisterCTA from "@/components/sections/RegisterCTA";
@@ -36,7 +35,6 @@ export default function HomeClient() {
           <WhyAgenticAI />
           <LearningOutcomes />
           <Journey />
-          <BuildathonTheme />
           <WhyParticipate />
           <EventStructure />
           <RegisterCTA />

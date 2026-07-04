@@ -4,7 +4,6 @@ import { EVENT } from "@/data/event";
 const NAV = [
   { href: "/#about", label: "About" },
   { href: "/#learning", label: "Learning Outcomes" },
-  { href: "/#theme", label: "Buildathon Theme" },
   { href: "/schedule", label: "Schedule" },
   { href: "/#faq", label: "FAQ" },
 ];

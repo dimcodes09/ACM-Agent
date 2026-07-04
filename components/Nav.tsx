@@ -8,7 +8,6 @@ import { EVENT } from "@/data/event";
 const LINKS = [
   { href: "/#about", label: "About" },
   { href: "/#learning", label: "Learn" },
-  { href: "/#theme", label: "Theme" },
   { href: "/schedule", label: "Schedule" },
   { href: "/#faq", label: "FAQ" },
 ];

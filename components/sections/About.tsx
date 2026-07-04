@@ -37,7 +37,7 @@ export default function About() {
               <img
                 src="/about_workshop.png"
                 alt="AI Bootcamp Workshop Session"
-                className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:scale-101 transition-all duration-700"
+                className="w-full h-full object-cover grayscale-0 opacity-95 group-hover:grayscale group-hover:opacity-80 group-hover:scale-101 transition-all duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-base)]/20 to-transparent" />
             </div>

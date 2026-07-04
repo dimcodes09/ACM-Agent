@@ -174,6 +174,7 @@ export default function LearningOutcomes() {
                   zIndex,
                   transformStyle: "preserve-3d",
                   pointerEvents: isActive ? "auto" : "none",
+                  willChange: "transform, opacity",
                 }}
                 animate={{
                   x: xVal,
@@ -208,7 +209,7 @@ export default function LearningOutcomes() {
                   <img
                     src={cardImg}
                     alt={eyebrow}
-                    className="w-full h-full object-cover grayscale contrast-[1.1] select-none pointer-events-none"
+                    className="w-full h-full object-cover grayscale-0 contrast-[1.1] group-hover:grayscale transition-all duration-500 select-none pointer-events-none"
                     draggable="false"
                   />
                   {/* Signal-tinted duotone wash — ties every photo to the site's accent color */}
