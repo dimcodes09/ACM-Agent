@@ -41,7 +41,7 @@ export default function About() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-base)]/20 to-transparent" />
             </div>
-            <div className="mt-3 px-3 pb-2 flex justify-between items-center font-mono-ui text-[9px] tracking-wider text-text-faint uppercase">
+            <div className="mt-3 px-3 pb-2 flex justify-between items-center font-mono-ui text-[9px] tracking-wider text-white/55 uppercase">
               <span>Figure 01 // Interactive Coding Session</span>
               <span>BPL_2026</span>
             </div>
@@ -57,7 +57,7 @@ export default function About() {
                 A workshop first.<br />
                 A build second.
               </h2>
-              <p className="mt-6 text-sm md:text-base leading-relaxed text-text-muted font-light max-w-lg">
+              <p className="mt-6 text-sm md:text-base leading-relaxed text-white/75 font-light max-w-lg">
                 {OVERVIEW}
               </p>
 
@@ -78,7 +78,7 @@ export default function About() {
 function Stat({ label, value }: { label: string; value: string }) {
   return (
     <div>
-      <p className="font-mono-ui text-[10px] uppercase tracking-wider text-text-faint">
+      <p className="font-mono-ui text-[10px] uppercase tracking-wider text-white/55">
         {label}
       </p>
       <p className="mt-2 text-sm font-semibold text-text uppercase">

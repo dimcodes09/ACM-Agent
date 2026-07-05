@@ -103,7 +103,7 @@ export default function AgentBootLoader({
       <div className="w-full max-w-lg font-mono-ui text-sm">
         <div className="flex items-center gap-2 mb-4 opacity-60">
           <span className="h-2.5 w-2.5 rounded-full bg-[var(--color-signal)]" />
-          <span className="text-text-muted text-xs tracking-wide">
+          <span className="text-white/75 text-xs tracking-wide">
             agents-of-change · boot
           </span>
         </div>
@@ -135,12 +135,12 @@ export default function AgentBootLoader({
               transition={{ duration: 0.3, ease: "easeOut" }}
             />
           </div>
-          <div className="mt-2 flex justify-between text-[10px] tracking-wider text-text-faint uppercase">
+          <div className="mt-2 flex justify-between text-[10px] tracking-wider text-white/55 uppercase">
             <span>Booting reasoning runtime</span>
             <span>{progress}%</span>
           </div>
         </div>
-        <p className="mt-8 text-center text-[10px] tracking-wider text-text-faint opacity-60">
+        <p className="mt-8 text-center text-[10px] tracking-wider text-white/55 opacity-60">
           click anywhere to skip
         </p>
       </div>

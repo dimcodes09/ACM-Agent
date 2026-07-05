@@ -130,17 +130,17 @@ export default function Hero() {
 
         <motion.p
           variants={item}
-          className="mt-6 max-w-2xl text-balance text-base text-text-muted sm:text-lg md:text-xl font-light leading-relaxed"
+          className="mt-6 max-w-2xl text-balance text-base text-white/75 sm:text-lg md:text-xl font-light leading-relaxed"
         >
           {EVENT.subtitle}
         </motion.p>
 
         <motion.div
           variants={item}
-          className="mt-8 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 font-mono-ui text-xs tracking-widest text-text-muted uppercase border-t border-b border-border/40 py-3 px-6"
+          className="mt-8 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 font-mono-ui text-xs tracking-widest text-white/75 uppercase border-t border-b border-border/40 py-3 px-6"
         >
           <span>{EVENT.dates}</span>
-          <span className="h-1 w-1 rounded-full bg-[var(--color-text-faint)]" />
+          <span className="h-1 w-1 rounded-full bg-white/55" />
           <span>{EVENT.format}</span>
         </motion.div>
 
@@ -168,7 +168,7 @@ export default function Hero() {
               <div className="font-display text-4xl sm:text-5xl font-black text-text tracking-tight tabular-nums">
                 <Counter value={s.value} suffix={s.suffix} />
               </div>
-              <div className="mt-2 font-mono-ui text-[9px] sm:text-[10px] uppercase tracking-[0.15em] text-text-muted max-w-[10ch] sm:max-w-none mx-auto">
+              <div className="mt-2 font-mono-ui text-[9px] sm:text-[10px] uppercase tracking-[0.15em] text-white/75 max-w-[10ch] sm:max-w-none mx-auto">
                 {s.label}
               </div>
             </div>
@@ -189,7 +189,7 @@ export default function Hero() {
             />
           ))}
         </div>
-        <span className="font-mono-ui text-[10px] sm:text-[11px] uppercase tracking-[0.1em] text-text-muted text-left">
+        <span className="font-mono-ui text-[10px] sm:text-[11px] uppercase tracking-[0.1em] text-white/75 text-left">
           Hosted at OIST Campus, Bhopal — by the ACM-W Student Chapter
         </span>
       </div>

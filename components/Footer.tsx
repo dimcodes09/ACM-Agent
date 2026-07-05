@@ -17,13 +17,13 @@ export default function Footer() {
             <span className="h-2 w-2 rounded-full bg-[var(--color-signal)]" />
             {EVENT.name}
           </p>
-          <p className="mt-2 text-sm text-text-muted">
+          <p className="mt-2 text-sm text-white/75">
             {EVENT.organizer}
           </p>
         </div>
 
         <div>
-          <p className="font-mono-ui text-xs uppercase tracking-wider text-text-faint">
+          <p className="font-mono-ui text-xs uppercase tracking-wider text-white/55">
             Navigate
           </p>
           <ul className="mt-4 space-y-2">
@@ -31,7 +31,7 @@ export default function Footer() {
               <li key={n.href}>
                 <Link
                   href={n.href}
-                  className="text-sm text-text-muted transition-colors hover:text-text"
+                  className="text-sm text-white/75 transition-colors hover:text-text"
                 >
                   {n.label}
                 </Link>
@@ -41,19 +41,19 @@ export default function Footer() {
         </div>
 
         <div>
-          <p className="font-mono-ui text-xs uppercase tracking-wider text-text-faint">
+          <p className="font-mono-ui text-xs uppercase tracking-wider text-white/55">
             Event
           </p>
-          <p className="mt-4 text-sm text-text-muted">
+          <p className="mt-4 text-sm text-white/75">
             {EVENT.dates}
           </p>
-          <p className="mt-1 text-sm text-text-muted">
+          <p className="mt-1 text-sm text-white/75">
             {EVENT.format}
           </p>
         </div>
       </div>
 
-      <div className="mx-auto mt-14 max-w-6xl border-t border-border pt-6 text-xs text-text-faint">
+      <div className="mx-auto mt-14 max-w-6xl border-t border-border pt-6 text-xs text-white/55">
         © {new Date().getFullYear()} {EVENT.organizer}. All rights reserved.
       </div>
     </footer>

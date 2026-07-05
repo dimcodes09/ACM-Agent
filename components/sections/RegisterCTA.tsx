@@ -47,7 +47,7 @@ export default function RegisterCTA() {
             Reserve your spot.
           </h2>
 
-          <div className="mt-8 flex flex-wrap justify-center gap-x-8 gap-y-3 font-mono-ui text-xs text-text-muted tracking-wider uppercase">
+          <div className="mt-8 flex flex-wrap justify-center gap-x-8 gap-y-3 font-mono-ui text-xs text-white/75 tracking-wider uppercase">
             <Fact label="Dates" value={EVENT.dates} />
             <Fact label="Organizer" value={EVENT.organizer} />
             <Fact label="Format" value={EVENT.format} />
@@ -72,7 +72,7 @@ export default function RegisterCTA() {
               </span>
             </motion.a>
           </div>
-          <p className="mt-5 text-[9px] font-mono-ui tracking-widest text-text-faint uppercase select-none">
+          <p className="mt-5 text-[9px] font-mono-ui tracking-widest text-white/55 uppercase select-none">
             // Registration link routes to the official event form.
           </p>
         </Reveal>
@@ -84,7 +84,7 @@ export default function RegisterCTA() {
 function Fact({ label, value }: { label: string; value: string }) {
   return (
     <span>
-      <span className="text-text-faint">{label}: </span>
+      <span className="text-white/55">{label}: </span>
       <span className="text-text">{value}</span>
     </span>
   );

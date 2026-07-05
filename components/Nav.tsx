@@ -57,14 +57,14 @@ export default function Nav() {
             <span className="font-display text-base font-bold tracking-tight text-text whitespace-nowrap">
               {EVENT.name}
             </span>
-            <span className="hidden sm:block font-mono-ui text-[9px] font-medium uppercase tracking-[0.18em] text-text-faint whitespace-nowrap mt-1">
+            <span className="hidden sm:block font-mono-ui text-[9px] font-medium uppercase tracking-[0.18em] text-white/55 whitespace-nowrap mt-1">
               {EVENT.organizer}
             </span>
           </div>
         </Link>
 
         {/* Desktop links */}
-        <nav className="hidden items-center gap-9 font-mono-ui text-[13px] font-medium tracking-wide text-text-muted md:flex">
+        <nav className="hidden items-center gap-9 font-mono-ui text-[13px] font-medium tracking-wide text-white/75 md:flex">
           {LINKS.map((l) => (
             <Link key={l.href} href={l.href} className="transition-colors hover:text-text">
               {l.label.toUpperCase()}
@@ -105,7 +105,7 @@ export default function Nav() {
                 key={l.href}
                 href={l.href}
                 onClick={() => setMobileOpen(false)}
-                className="font-mono-ui text-sm uppercase tracking-wide text-text-muted hover:text-text"
+                className="font-mono-ui text-sm uppercase tracking-wide text-white/75 hover:text-text"
               >
                 {l.label}
               </Link>

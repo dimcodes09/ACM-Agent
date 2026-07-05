@@ -44,7 +44,7 @@ export default function RegisterPage() {
           <h1 className="mt-5 font-display text-5xl md:text-6xl font-black tracking-tight text-text uppercase leading-none">
             {EVENT.name}
           </h1>
-          <p className="mt-4 text-base text-text-muted font-light">
+          <p className="mt-4 text-base text-white/75 font-light">
             {EVENT.dates} · {EVENT.organizer}
           </p>
 
@@ -52,12 +52,12 @@ export default function RegisterPage() {
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              className="mt-12 rounded-2xl border border-active/30 bg-[var(--color-active)]/[0.06] p-8 text-center"
+              className="mt-12 rounded-2xl border border-border bg-surface-raised/40 p-8 text-center"
             >
               <p className="font-display text-xl font-semibold text-text">
                 You&apos;re on the list.
               </p>
-              <p className="mt-2 text-sm text-text-muted">
+              <p className="mt-2 text-sm text-white/75">
                 Watch your inbox for workshop details and setup instructions.
               </p>
             </motion.div>
@@ -100,7 +100,7 @@ export default function RegisterPage() {
               >
                 Submit registration
               </button>
-              <p className="text-center text-xs text-text-faint">
+              <p className="text-center text-xs text-white/55">
                 Teams are formed after the workshop, on Day 1.
               </p>
             </form>
@@ -129,7 +129,7 @@ function Field({
 }) {
   return (
     <label className="block">
-      <span className="font-mono-ui text-[11px] uppercase tracking-wider text-text-faint">
+      <span className="font-mono-ui text-[11px] uppercase tracking-wider text-white/55">
         {label}
       </span>
       <input
@@ -138,7 +138,7 @@ function Field({
         value={value}
         onChange={onChange}
         required={required}
-        className="mt-2 w-full rounded-xl border border-border bg-surface px-4 py-3 text-text outline-none transition-colors focus:border-signal"
+        className="mt-2 w-full rounded-xl border border-border bg-surface px-4 py-3 text-text outline-none transition-colors focus:border-border-hover"
       />
     </label>
   );

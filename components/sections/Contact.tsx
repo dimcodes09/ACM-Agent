@@ -27,8 +27,8 @@ export default function Contact() {
       {/* Full-bleed campus photograph as the section background */}
       <div className="absolute inset-0 -z-10">
         <img src="/campus.jpg" alt="" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0d18]/92 via-[#0a0d18]/90 to-[#0a0d18]" />
-        <div className="absolute inset-0 bg-[#0a0d18]/35" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#08090c]/92 via-[#08090c]/90 to-[#08090c]" />
+        <div className="absolute inset-0 bg-[#08090c]/35" />
       </div>
 
       <div className="mx-auto max-w-5xl relative z-10">
@@ -45,7 +45,7 @@ export default function Contact() {
           <h2 className="mt-4 font-display text-5xl md:text-6xl font-black tracking-tight text-text uppercase leading-none">
             {CONTACT.organizer}
           </h2>
-          <p className="mt-5 max-w-md text-sm md:text-base leading-relaxed text-text-muted font-light">
+          <p className="mt-5 max-w-md text-sm md:text-base leading-relaxed text-white/75 font-light">
             For questions about the bootcamp, team buildathon, or registration procedures,
             reach out to the OIST ACM-W Student Chapter.
           </p>
@@ -71,7 +71,7 @@ export default function Contact() {
                       type="text"
                       required
                       placeholder="Your name"
-                      className="mt-1.5 w-full bg-transparent border-b border-white/15 pb-2 text-sm text-white placeholder:text-white/25 focus:border-signal focus:outline-none transition-colors"
+                      className="mt-1.5 w-full bg-transparent border-b border-white/15 pb-2 text-sm text-white placeholder:text-white/25 focus:border-border-hover focus:outline-none transition-colors"
                     />
                   </label>
                   <label className="block">
@@ -83,7 +83,7 @@ export default function Contact() {
                       type="email"
                       required
                       placeholder="you@email.com"
-                      className="mt-1.5 w-full bg-transparent border-b border-white/15 pb-2 text-sm text-white placeholder:text-white/25 focus:border-signal focus:outline-none transition-colors"
+                      className="mt-1.5 w-full bg-transparent border-b border-white/15 pb-2 text-sm text-white placeholder:text-white/25 focus:border-border-hover focus:outline-none transition-colors"
                     />
                   </label>
                   <label className="block sm:col-span-2">
@@ -94,7 +94,7 @@ export default function Contact() {
                       name="subject"
                       type="text"
                       placeholder="Registration, sponsorship, media..."
-                      className="mt-1.5 w-full bg-transparent border-b border-white/15 pb-2 text-sm text-white placeholder:text-white/25 focus:border-signal focus:outline-none transition-colors"
+                      className="mt-1.5 w-full bg-transparent border-b border-white/15 pb-2 text-sm text-white placeholder:text-white/25 focus:border-border-hover focus:outline-none transition-colors"
                     />
                   </label>
                   <label className="block sm:col-span-2">
@@ -106,14 +106,14 @@ export default function Contact() {
                       rows={3}
                       required
                       placeholder="Tell us what you need..."
-                      className="mt-1.5 w-full bg-transparent border-b border-white/15 pb-2 text-sm text-white placeholder:text-white/25 focus:border-signal focus:outline-none transition-colors resize-none"
+                      className="mt-1.5 w-full bg-transparent border-b border-white/15 pb-2 text-sm text-white placeholder:text-white/25 focus:border-border-hover focus:outline-none transition-colors resize-none"
                     />
                   </label>
                 </div>
 
                 <button
                   type="submit"
-                  className="mt-8 inline-flex items-center gap-2 rounded-full bg-signal text-[#0a0d18] font-mono-ui text-xs font-semibold uppercase tracking-[0.1em] px-6 py-3 hover:brightness-110 transition-all"
+                  className="mt-8 inline-flex items-center gap-2 rounded-full bg-signal text-[#08090c] font-mono-ui text-xs font-semibold uppercase tracking-[0.1em] px-6 py-3 hover:brightness-110 transition-all"
                 >
                   Send Message <Send className="h-3.5 w-3.5" />
                 </button>
@@ -174,7 +174,7 @@ export default function Contact() {
                 {/* Small photo credential */}
                 <div className="relative mt-8 h-32 rounded-xl overflow-hidden border border-white/10">
                   <img src="/campus.jpg" alt="OIST Campus" className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0d18]/80 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#08090c]/80 via-transparent to-transparent" />
                   <div className="absolute top-3 right-3 flex h-8 w-8 items-center justify-center rounded-full border border-white/15 bg-black/30 backdrop-blur-sm overflow-hidden">
                     <img src="/oist-logo.png" alt="OIST" className="h-5 w-5 object-contain" />
                   </div>

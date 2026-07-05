@@ -86,7 +86,7 @@ export default function Journey() {
   return (
     <section
       id="journey"
-      className="relative overflow-hidden px-6 py-28 md:py-36 bg-[#0a0d18] w-full border-t border-b border-border"
+      className="relative overflow-hidden px-6 py-28 md:py-36 bg-gradient-to-b from-[#0e1015] to-[#08090c] w-full border-t border-b border-border"
     >
       <div className="mx-auto max-w-5xl w-full relative z-10">
         <Reveal className="max-w-2xl text-center mb-14 mx-auto">
@@ -127,7 +127,7 @@ export default function Journey() {
         </div>
 
         {/* Split panel */}
-        <div className="rounded-[28px] border border-white/[0.08] bg-[#0b0e1c] overflow-hidden shadow-[0_30px_80px_-20px_rgba(0,0,0,0.6)]">
+        <div className="rounded-[28px] border border-white/[0.08] bg-[var(--color-surface)] overflow-hidden shadow-[0_30px_80px_-20px_rgba(0,0,0,0.6)]">
           <div className="grid md:grid-cols-[40%_60%]">
             {/* Photograph column */}
             <div className="relative h-[280px] md:h-auto min-h-[420px] overflow-hidden group">
@@ -143,8 +143,8 @@ export default function Journey() {
                   className="absolute inset-0 w-full h-full object-cover grayscale-0 contrast-[1.1] group-hover:grayscale transition-all duration-700"
                 />
               </AnimatePresence>
-              <div className="absolute inset-0 bg-gradient-to-br from-[#0b1a3a]/70 via-[#0b0e1c]/30 to-transparent mix-blend-multiply" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0b0e1c] via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-br from-[#0b1a3a]/70 via-[var(--color-surface)]/30 to-transparent mix-blend-multiply" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-surface)] via-transparent to-transparent" />
               <div className="absolute top-5 left-5">
                 <span className="font-mono-ui text-[9px] uppercase tracking-[0.15em] text-white/85 bg-black/30 backdrop-blur-sm border border-white/10 rounded-full px-2.5 py-1">
                   {day.tag}

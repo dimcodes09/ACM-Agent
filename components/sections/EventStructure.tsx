@@ -65,7 +65,7 @@ export default function EventStructure() {
               <h2 className="mt-4 font-display text-5xl md:text-7xl font-black tracking-tight text-text uppercase leading-none">
                 WHAT TEAMS<br />EXPERIENCE
               </h2>
-              <p className="mt-5 text-base text-text-muted font-light leading-relaxed max-w-md">
+              <p className="mt-5 text-base font-light leading-relaxed max-w-md" style={{ color: 'rgba(255,255,255,0.75)' }}>
                 A serious builder environment designed for real product development, deep technical review, and long-term innovation outcomes.
               </p>
             </Reveal>
@@ -96,7 +96,7 @@ export default function EventStructure() {
                         <h3 className="font-display text-2xl md:text-3xl font-bold tracking-tight text-text uppercase leading-none group-hover:text-white transition-colors duration-300">
                           {item.title}
                         </h3>
-                        <p className="text-sm md:text-base text-text-muted font-light leading-relaxed">
+                        <p className="text-sm md:text-base font-light leading-relaxed" style={{ color: 'rgba(255,255,255,0.75)' }}>
                           {item.desc}
                         </p>
                       </div>

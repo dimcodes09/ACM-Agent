@@ -1,19 +1,36 @@
 @import "tailwindcss";
 
 :root {
-  /* Surfaces */
-  --color-base: #0a0d18;          /* Deep dark navy */
-  --color-surface: #12162b;       /* Navy surface */
-  --color-surface-raised: #1a203f; /* Raised navy surface */
-  --color-border: #283058;        /* Slate-navy border */
-  --color-border-hover: #3d4982;  /* Bright slate-navy border */
+  --color-base: #08090c;
+  --color-surface: #0e1015;
+  --color-surface-raised: #141722;
+  --color-border: #22242f;
+  --color-border-hover: #323545;
 
-  /* Text */
+  --color-text: #f8fafc;
+  --color-text-muted: #e2e8f0;    /* Slate-200 — brighter for dark bg */
+  --color-text-faint: #cbd5e1;   /* Slate-300 — brighter faint text */
+
+  --color-signal: #60a5fa;
+  --color-signal-soft: rgba(96, 165, 250, 0.15);
+  --color-active: #38bdf8;
+  --color-active-soft: rgba(56, 189, 248, 0.12);
+
+  --radius-card: 16px;
+  --ease-signature: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@theme {
+  --color-base: #08090c;          /* Deep dark charcoal */
+  --color-surface: #0e1015;       /* Slightly lighter dark slate */
+  --color-surface-raised: #141722; /* Raised surface */
+  --color-border: #22242f;        /* Neutral dark border */
+  --color-border-hover: #323545;  /* Neutral hover border */
+
   --color-text: #f8fafc;          /* Off-white, slate-50 */
-  --color-text-muted: #cbd5e1;    /* Slate-300 */
-  --color-text-faint: #94a3b8;    /* Slate-400 */
+  --color-text-muted: #e2e8f0;    /* Slate-200 — brighter for dark bg */
+  --color-text-faint: #cbd5e1;    /* Slate-300 — brighter faint text */
 
-  /* Signal / accent */
   --color-signal: #60a5fa;        /* Cool blue */
   --color-signal-soft: rgba(96, 165, 250, 0.15);
   --color-active: #38bdf8;        /* Sky blue */
@@ -21,19 +38,6 @@
 
   --radius-card: 16px;
   --ease-signature: cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-@theme inline {
-  --color-base: var(--color-base);
-  --color-surface: var(--color-surface);
-  --color-surface-raised: var(--color-surface-raised);
-  --color-border: var(--color-border);
-  --color-border-hover: var(--color-border-hover);
-  --color-text: var(--color-text);
-  --color-text-muted: var(--color-text-muted);
-  --color-text-faint: var(--color-text-faint);
-  --color-signal: var(--color-signal);
-  --color-active: var(--color-active);
 
   --font-display: var(--font-inter);
   --font-body: var(--font-inter);
@@ -100,3 +104,16 @@ body {
   -webkit-backdrop-filter: blur(16px) saturate(140%);
   border: 1px solid var(--color-border);
 }
+
+/* ── Text color overrides ────────────────────────────────────
+   Tailwind v4 generates opacity variants with color-mix(in oklab)
+   which can fail silently in some browsers. These rgba fallbacks
+   guarantee visibility on the dark backgrounds.                 */
+.text-white\/75 { color: rgba(255, 255, 255, 0.75) !important; }
+.text-white\/70 { color: rgba(255, 255, 255, 0.70) !important; }
+.text-white\/55 { color: rgba(255, 255, 255, 0.55) !important; }
+.text-white\/50 { color: rgba(255, 255, 255, 0.50) !important; }
+.text-white\/40 { color: rgba(255, 255, 255, 0.40) !important; }
+.text-white\/35 { color: rgba(255, 255, 255, 0.35) !important; }
+.text-white\/30 { color: rgba(255, 255, 255, 0.30) !important; }
+.text-white\/25 { color: rgba(255, 255, 255, 0.25) !important; }

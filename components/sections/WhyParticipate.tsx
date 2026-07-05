@@ -15,7 +15,7 @@ const IMAGES = [
 
 export default function WhyParticipate() {
   return (
-    <section className="relative overflow-hidden px-6 py-28 md:py-36 bg-[#08090c] border-t border-border/30">
+    <section className="relative overflow-hidden px-6 py-28 md:py-36 bg-gradient-to-b from-[#08090c] to-[#0e1015] border-t border-border/30">
       {/* Background ambient lighting */}
       <div className="pointer-events-none absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-signal/5 blur-[120px]" />
 
@@ -27,7 +27,7 @@ export default function WhyParticipate() {
           <h2 className="mt-4 font-display text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-text uppercase leading-none">
             WHY PARTICIPATE?
           </h2>
-          <p className="mt-6 text-sm md:text-base leading-relaxed text-text-muted font-light max-w-2xl mx-auto">
+          <p className="mt-6 text-sm md:text-base leading-relaxed font-light max-w-2xl mx-auto" style={{ color: 'rgba(255,255,255,0.75)' }}>
             Build, validate, present, and connect inside one of Bhopal&apos;s flagship national-level innovation platforms
           </p>
         </Reveal>
@@ -45,7 +45,7 @@ export default function WhyParticipate() {
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.6, delay: i * 0.05, ease: [0.16, 1, 0.3, 1] }}
                 whileHover={{ y: -6 }}
-                className="group relative rounded-2xl overflow-hidden border border-border bg-surface h-[460px] md:h-[480px] transition-all duration-300 hover:border-signal/40 hover:shadow-2xl"
+                className="group relative rounded-2xl overflow-hidden border border-border bg-surface h-[460px] md:h-[480px] transition-all duration-300 hover:border-border-hover hover:shadow-2xl"
               >
                 {/* Background Image */}
                 <div className="absolute inset-0 overflow-hidden">
@@ -68,7 +68,7 @@ export default function WhyParticipate() {
                   <h3 className="font-display text-2xl font-black text-white uppercase leading-[1.1] tracking-tight group-hover:text-signal transition-colors duration-300">
                     {benefit.title}
                   </h3>
-                  <p className="text-xs leading-relaxed text-text-muted/90 font-light transition-colors duration-300">
+                  <p className="text-xs leading-relaxed font-light transition-colors duration-300" style={{ color: 'rgba(255,255,255,0.70)' }}>
                     {benefit.description}
                   </p>
                 </div>

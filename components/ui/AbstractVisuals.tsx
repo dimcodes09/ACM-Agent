@@ -9,7 +9,7 @@ export function AgentArchitectureDiagram({ className = "" }: { className?: strin
   return (
     <div className={`relative w-full overflow-hidden rounded-2xl border border-border bg-surface-raised/30 p-6 ${className}`}>
       {/* Technical coordinate header */}
-      <div className="flex justify-between items-center mb-6 border-b border-border pb-3 font-mono-ui text-[9px] tracking-wider text-text-faint">
+      <div className="flex justify-between items-center mb-6 border-b border-border pb-3 font-mono-ui text-[9px] tracking-wider text-white/55">
         <span>SCHEMA // AGENT_CORE_v1.2</span>
         <span>STATUS: SYS_OK</span>
       </div>
@@ -28,7 +28,7 @@ export function AgentArchitectureDiagram({ className = "" }: { className?: strin
         <g>
           <rect x="15" y="100" width="70" height="40" rx="4" fill="var(--color-surface)" stroke="var(--color-border)" strokeWidth="1" />
           <text x="50" y="120" textAnchor="middle" fill="var(--color-text)" fontSize="8.5" fontFamily="var(--font-mono)" fontWeight="600">INPUT</text>
-          <text x="50" y="132" textAnchor="middle" fill="var(--color-text-muted)" fontSize="7.5" fontFamily="var(--font-mono)">[User Query]</text>
+          <text x="50" y="132" textAnchor="middle" fill="rgba(255,255,255,0.55)" fontSize="7.5" fontFamily="var(--font-mono)">[User Query]</text>
         </g>
 
         {/* Central Core Agent Block */}
@@ -36,28 +36,28 @@ export function AgentArchitectureDiagram({ className = "" }: { className?: strin
           <rect x="135" y="90" width="110" height="60" rx="4" fill="var(--color-surface-raised)" stroke="var(--color-signal)" strokeWidth="1.2" />
           <text x="190" y="112" textAnchor="middle" fill="var(--color-text)" fontSize="9" fontWeight="600" fontFamily="var(--font-mono)">LLM PLANNER</text>
           <text x="190" y="125" textAnchor="middle" fill="var(--color-active)" fontSize="7.5" fontFamily="var(--font-mono)">[ReAct Loop]</text>
-          <text x="190" y="137" textAnchor="middle" fill="var(--color-text-faint)" fontSize="7" fontFamily="var(--font-mono)">agent.reason()</text>
+          <text x="190" y="137" textAnchor="middle" fill="rgba(255,255,255,0.4)" fontSize="7" fontFamily="var(--font-mono)">agent.reason()</text>
         </g>
 
         {/* Memory Sub-Block (Top) */}
         <g>
           <rect x="145" y="15" width="90" height="40" rx="4" fill="var(--color-surface)" stroke="var(--color-border)" strokeWidth="1" />
           <text x="190" y="35" textAnchor="middle" fill="var(--color-text)" fontSize="8.5" fontFamily="var(--font-mono)" fontWeight="600">RAG MEMORY</text>
-          <text x="190" y="47" textAnchor="middle" fill="var(--color-text-faint)" fontSize="7" fontFamily="var(--font-mono)">vector-store</text>
+          <text x="190" y="47" textAnchor="middle" fill="rgba(255,255,255,0.4)" fontSize="7" fontFamily="var(--font-mono)">vector-store</text>
         </g>
 
         {/* Tools Sub-Block (Bottom) */}
         <g>
           <rect x="145" y="185" width="90" height="40" rx="4" fill="var(--color-surface)" stroke="var(--color-border)" strokeWidth="1" />
           <text x="190" y="205" textAnchor="middle" fill="var(--color-text)" fontSize="8.5" fontFamily="var(--font-mono)" fontWeight="600">APIS & TOOLS</text>
-          <text x="190" y="217" textAnchor="middle" fill="var(--color-text-faint)" fontSize="7" fontFamily="var(--font-mono)">tool_calling()</text>
+          <text x="190" y="217" textAnchor="middle" fill="rgba(255,255,255,0.4)" fontSize="7" fontFamily="var(--font-mono)">tool_calling()</text>
         </g>
 
         {/* Response Block (Right) */}
         <g>
           <rect x="295" y="100" width="70" height="40" rx="4" fill="var(--color-surface)" stroke="var(--color-border)" strokeWidth="1" />
           <text x="330" y="120" textAnchor="middle" fill="var(--color-text)" fontSize="8.5" fontFamily="var(--font-mono)" fontWeight="600">OUTPUT</text>
-          <text x="330" y="132" textAnchor="middle" fill="var(--color-text-muted)" fontSize="7.5" fontFamily="var(--font-mono)">[Response]</text>
+          <text x="330" y="132" textAnchor="middle" fill="rgba(255,255,255,0.55)" fontSize="7.5" fontFamily="var(--font-mono)">[Response]</text>
         </g>
 
         {/* Connections & Arrows (Thin solid gray lines) */}
@@ -103,7 +103,7 @@ export function MultiAgentOrchestrationDiagram({ className = "" }: { className?:
 
   return (
     <div className={`relative w-full overflow-hidden rounded-2xl border border-border bg-surface-raised/30 p-6 ${className}`}>
-      <div className="flex justify-between items-center mb-6 border-b border-border pb-3 font-mono-ui text-[9px] tracking-wider text-text-faint">
+      <div className="flex justify-between items-center mb-6 border-b border-border pb-3 font-mono-ui text-[9px] tracking-wider text-white/55">
         <span>SCHEMA // MULTI_AGENT_FLOW</span>
         <span>COORDINATION: ACTIVE</span>
       </div>
@@ -115,21 +115,21 @@ export function MultiAgentOrchestrationDiagram({ className = "" }: { className?:
         <g>
           <rect x="135" y="10" width="110" height="46" rx="4" fill="var(--color-surface-raised)" stroke="var(--color-signal)" strokeWidth="1" />
           <text x="190" y="32" textAnchor="middle" fill="var(--color-text)" fontSize="8.5" fontWeight="600" fontFamily="var(--font-mono)">ORCHESTRATOR</text>
-          <text x="190" y="44" textAnchor="middle" fill="var(--color-text-faint)" fontSize="7" fontFamily="var(--font-mono)">coordinator.py</text>
+          <text x="190" y="44" textAnchor="middle" fill="rgba(255,255,255,0.4)" fontSize="7" fontFamily="var(--font-mono)">coordinator.py</text>
         </g>
 
         {/* Sub-Agent A (Academics) */}
         <g>
           <rect x="20" y="100" width="100" height="46" rx="4" fill="var(--color-surface)" stroke="var(--color-border)" strokeWidth="1" />
           <text x="70" y="122" textAnchor="middle" fill="var(--color-text)" fontSize="8.5" fontWeight="600" fontFamily="var(--font-mono)">ACADEMIC AGENT</text>
-          <text x="70" y="134" textAnchor="middle" fill="var(--color-text-faint)" fontSize="7" fontFamily="var(--font-mono)">retriever.py</text>
+          <text x="70" y="134" textAnchor="middle" fill="rgba(255,255,255,0.4)" fontSize="7" fontFamily="var(--font-mono)">retriever.py</text>
         </g>
 
         {/* Sub-Agent B (Facilities) */}
         <g>
           <rect x="260" y="100" width="100" height="46" rx="4" fill="var(--color-surface)" stroke="var(--color-border)" strokeWidth="1" />
           <text x="310" y="122" textAnchor="middle" fill="var(--color-text)" fontSize="8.5" fontWeight="600" fontFamily="var(--font-mono)">FACILITIES AGENT</text>
-          <text x="310" y="134" textAnchor="middle" fill="var(--color-text-faint)" fontSize="7" fontFamily="var(--font-mono)">tools.py</text>
+          <text x="310" y="134" textAnchor="middle" fill="rgba(255,255,255,0.4)" fontSize="7" fontFamily="var(--font-mono)">tools.py</text>
         </g>
 
         {/* Shared Memory Bus */}
@@ -164,7 +164,7 @@ export function MultiAgentOrchestrationDiagram({ className = "" }: { className?:
 export function VectorSpaceRetrievalPlot({ className = "" }: { className?: string }) {
   return (
     <div className={`relative w-full overflow-hidden rounded-2xl border border-border bg-surface-raised/30 p-6 ${className}`}>
-      <div className="flex justify-between items-center mb-6 border-b border-border pb-3 font-mono-ui text-[9px] tracking-wider text-text-faint">
+      <div className="flex justify-between items-center mb-6 border-b border-border pb-3 font-mono-ui text-[9px] tracking-wider text-white/55">
         <span>DATAPLOT // VECTOR_RETRIEVAL_2D</span>
         <span>INDEX: COMPLETED</span>
       </div>
@@ -175,21 +175,21 @@ export function VectorSpaceRetrievalPlot({ className = "" }: { className?: strin
         {/* Axes */}
         <line x1="30" y1="20" x2="30" y2="190" stroke="var(--color-border)" strokeWidth="1" />
         <line x1="30" y1="190" x2="360" y2="190" stroke="var(--color-border)" strokeWidth="1" />
-        <text x="25" y="15" fill="var(--color-text-faint)" fontSize="7" fontFamily="var(--font-mono)">DIM_Y</text>
-        <text x="365" y="193" fill="var(--color-text-faint)" fontSize="7" fontFamily="var(--font-mono)">DIM_X</text>
+        <text x="25" y="15" fill="rgba(255,255,255,0.4)" fontSize="7" fontFamily="var(--font-mono)">DIM_Y</text>
+        <text x="365" y="193" fill="rgba(255,255,255,0.4)" fontSize="7" fontFamily="var(--font-mono)">DIM_X</text>
 
         {/* Cluster 1: Document chunk embeddings (faint circles) */}
-        <circle cx="90" cy="60" r="4" fill="var(--color-text-faint)" fillOpacity="0.4" />
-        <circle cx="100" cy="50" r="4" fill="var(--color-text-faint)" fillOpacity="0.4" />
-        <circle cx="110" cy="70" r="4" fill="var(--color-text-faint)" fillOpacity="0.4" />
-        <circle cx="95" cy="80" r="4" fill="var(--color-text-faint)" fillOpacity="0.4" />
+        <circle cx="90" cy="60" r="4" fill="rgba(255,255,255,0.4)" fillOpacity="0.4" />
+        <circle cx="100" cy="50" r="4" fill="rgba(255,255,255,0.4)" fillOpacity="0.4" />
+        <circle cx="110" cy="70" r="4" fill="rgba(255,255,255,0.4)" fillOpacity="0.4" />
+        <circle cx="95" cy="80" r="4" fill="rgba(255,255,255,0.4)" fillOpacity="0.4" />
 
         {/* Cluster 2: Academic database chunks (target cluster) */}
-        <circle cx="260" cy="120" r="4" fill="var(--color-text-faint)" fillOpacity="0.4" />
+        <circle cx="260" cy="120" r="4" fill="rgba(255,255,255,0.4)" fillOpacity="0.4" />
         <circle cx="280" cy="110" r="4" fill="var(--color-signal)" stroke="var(--color-signal)" strokeWidth="0.5" strokeOpacity="0.8" />
         <circle cx="290" cy="135" r="4" fill="var(--color-signal)" />
-        <circle cx="270" cy="140" r="4" fill="var(--color-text-faint)" fillOpacity="0.4" />
-        <circle cx="250" cy="130" r="4" fill="var(--color-text-faint)" fillOpacity="0.4" />
+        <circle cx="270" cy="140" r="4" fill="rgba(255,255,255,0.4)" fillOpacity="0.4" />
+        <circle cx="250" cy="130" r="4" fill="rgba(255,255,255,0.4)" fillOpacity="0.4" />
         <circle cx="295" cy="115" r="4" fill="var(--color-signal)" fillOpacity="0.6" />
 
         {/* Query Vector vector pointer */}
@@ -199,7 +199,7 @@ export function VectorSpaceRetrievalPlot({ className = "" }: { className?: strin
 
         {/* Retrieval bounds circle */}
         <circle cx="280" cy="125" r="30" fill="none" stroke="var(--color-border-hover)" strokeWidth="0.8" />
-        <text x="310" y="152" fill="var(--color-text-muted)" fontSize="7.5" fontFamily="var(--font-mono)">nearest_neighbors(k=3)</text>
+        <text x="310" y="152" fill="rgba(255,255,255,0.55)" fontSize="7.5" fontFamily="var(--font-mono)">nearest_neighbors(k=3)</text>
       </svg>
     </div>
   );
@@ -210,7 +210,7 @@ export function CampusAIAssistantBlueprint({ className = "" }: { className?: str
   return (
     <div className={`relative w-full overflow-hidden rounded-2xl border border-border bg-base/80 p-6 ${className}`}>
       {/* Corner labels */}
-      <div className="flex justify-between items-center mb-5 border-b border-border pb-3 font-mono-ui text-[8.5px] tracking-wider text-text-faint">
+      <div className="flex justify-between items-center mb-5 border-b border-border pb-3 font-mono-ui text-[8.5px] tracking-wider text-white/55">
         <span>PROJECT // CAMPUS_AI_SCHEMATIC</span>
         <span>REVISION // 1.0.4</span>
       </div>
@@ -222,7 +222,7 @@ export function CampusAIAssistantBlueprint({ className = "" }: { className?: str
         <g transform="translate(10, 95)">
           <rect width="80" height="50" rx="3" fill="var(--color-surface)" stroke="var(--color-border)" strokeWidth="1" />
           <text x="40" y="24" textAnchor="middle" fill="var(--color-text)" fontSize="8" fontFamily="var(--font-mono)" fontWeight="600">USER_PORTAL</text>
-          <text x="40" y="36" textAnchor="middle" fill="var(--color-text-faint)" fontSize="7" fontFamily="var(--font-mono)">chat_ui.tsx</text>
+          <text x="40" y="36" textAnchor="middle" fill="rgba(255,255,255,0.4)" fontSize="7" fontFamily="var(--font-mono)">chat_ui.tsx</text>
         </g>
 
         {/* Coordinator Node */}
@@ -230,28 +230,28 @@ export function CampusAIAssistantBlueprint({ className = "" }: { className?: str
           <rect width="110" height="60" rx="4" fill="var(--color-surface-raised)" stroke="var(--color-signal)" strokeWidth="1" />
           <text x="55" y="24" textAnchor="middle" fill="var(--color-text)" fontSize="8.5" fontWeight="600" fontFamily="var(--font-mono)">COORDINATOR</text>
           <text x="55" y="36" textAnchor="middle" fill="var(--color-active)" fontSize="7.5" fontFamily="var(--font-mono)">intent_classifier</text>
-          <text x="55" y="48" textAnchor="middle" fill="var(--color-text-faint)" fontSize="6.5" fontFamily="var(--font-mono)">agent.orchestrate()</text>
+          <text x="55" y="48" textAnchor="middle" fill="rgba(255,255,255,0.4)" fontSize="6.5" fontFamily="var(--font-mono)">agent.orchestrate()</text>
         </g>
 
         {/* Academic Vector Storage Agent (Top Right) */}
         <g transform="translate(280, 15)">
           <rect width="90" height="42" rx="3" fill="var(--color-surface)" stroke="var(--color-border)" strokeWidth="1" />
-          <text x="45" y="22" textAnchor="middle" fill="var(--color-text-muted)" fontSize="7.5" fontFamily="var(--font-mono)">ACADEMIC_RAG</text>
-          <text x="45" y="32" textAnchor="middle" fill="var(--color-text-faint)" fontSize="6.5" fontFamily="var(--font-mono)">db_courses</text>
+          <text x="45" y="22" textAnchor="middle" fill="rgba(255,255,255,0.55)" fontSize="7.5" fontFamily="var(--font-mono)">ACADEMIC_RAG</text>
+          <text x="45" y="32" textAnchor="middle" fill="rgba(255,255,255,0.4)" fontSize="6.5" fontFamily="var(--font-mono)">db_courses</text>
         </g>
 
         {/* Hostel Tool Calling Agent (Middle Right) */}
         <g transform="translate(280, 99)">
           <rect width="90" height="42" rx="3" fill="var(--color-surface)" stroke="var(--color-border)" strokeWidth="1" />
-          <text x="45" y="22" textAnchor="middle" fill="var(--color-text-muted)" fontSize="7.5" fontFamily="var(--font-mono)">FACILITIES_API</text>
-          <text x="45" y="32" textAnchor="middle" fill="var(--color-text-faint)" fontSize="6.5" fontFamily="var(--font-mono)">hostel_status</text>
+          <text x="45" y="22" textAnchor="middle" fill="rgba(255,255,255,0.55)" fontSize="7.5" fontFamily="var(--font-mono)">FACILITIES_API</text>
+          <text x="45" y="32" textAnchor="middle" fill="rgba(255,255,255,0.4)" fontSize="6.5" fontFamily="var(--font-mono)">hostel_status</text>
         </g>
 
         {/* General Admin Agent (Bottom Right) */}
         <g transform="translate(280, 183)">
           <rect width="90" height="42" rx="3" fill="var(--color-surface)" stroke="var(--color-border)" strokeWidth="1" />
-          <text x="45" y="22" textAnchor="middle" fill="var(--color-text-muted)" fontSize="7.5" fontFamily="var(--font-mono)">ADMIN_RETRIEVER</text>
-          <text x="45" y="32" textAnchor="middle" fill="var(--color-text-faint)" fontSize="6.5" fontFamily="var(--font-mono)">db_general</text>
+          <text x="45" y="22" textAnchor="middle" fill="rgba(255,255,255,0.55)" fontSize="7.5" fontFamily="var(--font-mono)">ADMIN_RETRIEVER</text>
+          <text x="45" y="32" textAnchor="middle" fill="rgba(255,255,255,0.4)" fontSize="6.5" fontFamily="var(--font-mono)">db_general</text>
         </g>
 
         {/* Flow Connectors */}

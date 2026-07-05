@@ -98,7 +98,7 @@ export default function LearningOutcomes() {
   return (
     <section
       id="learning"
-      className="relative overflow-hidden px-6 py-28 md:py-36 bg-[#0a0d18] w-full min-h-[920px] flex items-center justify-center border-t border-b border-border"
+      className="relative overflow-hidden px-6 py-28 md:py-36 bg-gradient-to-b from-[#08090c] to-[#0e1015] w-full min-h-[920px] flex items-center justify-center border-t border-b border-border"
     >
 
       <div className="mx-auto max-w-6xl w-full relative z-10 flex flex-col items-center">
@@ -109,7 +109,7 @@ export default function LearningOutcomes() {
           <h2 className="mt-4 font-display text-4xl md:text-6xl font-black tracking-tight text-text uppercase leading-none">
             What you&apos;ll walk away with.
           </h2>
-          <p className="mt-4 text-sm text-text-muted font-light max-w-md mx-auto">
+          <p className="mt-4 text-sm text-white/75 font-light max-w-md mx-auto">
             Seven skills, taught in sequence. Swipe or use the controls below.
           </p>
         </Reveal>
@@ -200,8 +200,8 @@ export default function LearningOutcomes() {
                 }
                 className={`select-none cursor-grab active:cursor-grabbing rounded-[20px] overflow-hidden flex flex-col transition-all duration-300 ${
                   isActive
-                    ? "border border-white/[0.08] bg-[#0b0e1c] shadow-[0_25px_60px_-15px_rgba(0,0,0,0.7)]"
-                    : "border border-white/[0.04] bg-[#0b0e1c]/70 blur-[1px]"
+                    ? "border border-white/[0.08] bg-[var(--color-surface)] shadow-[0_25px_60px_-15px_rgba(0,0,0,0.7)]"
+                    : "border border-white/[0.04] bg-[var(--color-surface)]/70 blur-[1px]"
                 }`}
               >
                 {/* Photograph band — duotone treatment, tells the story rather than decorating it */}
