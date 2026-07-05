@@ -115,13 +115,26 @@ export const SCHEDULE = {
 } as const;
 
 export const WHY_PARTICIPATE = [
-  "Build your first AI Agent",
-  "Learn from Industry Experts",
-  "Team-based Development",
-  "Real-world AI Project",
-  "Certificate of Participation",
-  "Networking Opportunities",
-  "Hands-on Learning Experience",
+  {
+    title: "National Visibility",
+    description: "Compete on a pan-India platform designed to position OIST as a serious innovation hub for student builders.",
+  },
+  {
+    title: "Product-First Culture",
+    description: "Move beyond surface-level prototypes and build solutions judged on architecture, feasibility, user value, and execution.",
+  },
+  {
+    title: "Mentor Access",
+    description: "Get feedback through mentor interactions, technical reviews, jury evaluations, and final presentation rounds.",
+  },
+  {
+    title: "Startup Pathways",
+    description: "Create opportunities for internships, placements, startup visibility, and industry-academia collaboration.",
+  },
+  {
+    title: "Buildverse Community",
+    description: "Join a long-term builder community built around deep-tech, product thinking, and real-world problem solving.",
+  },
 ] as const;
 
 // NOTE: The source document only listed candidate FAQ *questions*, with no

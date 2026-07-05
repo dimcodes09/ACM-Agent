@@ -48,20 +48,21 @@ export default function EventStructure() {
   return (
     <section
       ref={containerRef}
-      className="relative overflow-hidden px-6 py-28 md:py-36 bg-surface/10 border-t border-b border-border"
+      className="relative overflow-hidden px-6 py-28 md:py-36 bg-gradient-to-b from-[#0e1015] to-[#08090c] border-t border-b border-border"
     >
-      <AnimatedBlueprintGrid className="opacity-[0.015]" />
+      {/* Subtle background environment */}
+      <div className="pointer-events-none absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-signal/5 blur-[110px]" />
 
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-6xl relative z-10">
         <div className="grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:gap-20 lg:items-start">
           
           {/* Left Column: Intro */}
           <div className="lg:sticky lg:top-36 lg:self-start space-y-5">
             <Reveal>
-              <span className="font-mono-ui text-xs tracking-[0.25em] text-text-faint uppercase">
+              <span className="font-mono-ui text-xs tracking-[0.25em] text-signal uppercase font-semibold">
                 EVENT STRUCTURE
               </span>
-              <h2 className="mt-3 font-display text-5xl md:text-6xl font-black tracking-tight text-text uppercase leading-none">
+              <h2 className="mt-4 font-display text-5xl md:text-7xl font-black tracking-tight text-text uppercase leading-none">
                 WHAT TEAMS<br />EXPERIENCE
               </h2>
               <p className="mt-5 text-base text-text-muted font-light leading-relaxed max-w-md">
@@ -71,11 +72,11 @@ export default function EventStructure() {
           </div>
 
           {/* Right Column: Timeline Points */}
-          <div className="relative pl-6 md:pl-10">
+          <div className="relative pl-8 md:pl-12">
             {/* Visual dividing vertical line */}
-            <div className="absolute left-0 top-2 bottom-2 w-[1.5px] bg-[var(--color-border)]" />
+            <div className="absolute left-0 top-2 bottom-2 w-[2px] bg-[var(--color-border)]/40" />
             <motion.div
-              className="absolute left-0 top-2 w-[1.5px] origin-top bg-[var(--color-signal)]"
+              className="absolute left-0 top-2 w-[2px] origin-top bg-[var(--color-signal)]"
               style={{ scaleY, height: "96%" }}
             />
 
@@ -86,16 +87,16 @@ export default function EventStructure() {
                   <Reveal key={item.title} delay={idx * 0.05}>
                     <div className="flex gap-5 md:gap-8 items-start group">
                       {/* Icon */}
-                      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-border bg-surface-raised transition-transform duration-500 group-hover:scale-110 group-hover:border-signal/30">
+                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-signal/10 transition-transform duration-500 group-hover:scale-110">
                         <Icon className="h-5 w-5 text-signal" />
                       </div>
 
                       {/* Content */}
-                      <div className="space-y-2">
-                        <h3 className="font-display text-xl md:text-2xl font-bold tracking-tight text-text uppercase leading-none">
+                      <div className="space-y-2.5">
+                        <h3 className="font-display text-2xl md:text-3xl font-bold tracking-tight text-text uppercase leading-none group-hover:text-white transition-colors duration-300">
                           {item.title}
                         </h3>
-                        <p className="text-sm text-text-muted font-light leading-relaxed">
+                        <p className="text-sm md:text-base text-text-muted font-light leading-relaxed">
                           {item.desc}
                         </p>
                       </div>

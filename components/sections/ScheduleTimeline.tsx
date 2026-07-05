@@ -16,7 +16,7 @@ export default function ScheduleTimeline() {
   const days: DayBlock[] = [SCHEDULE.day1, SCHEDULE.day2];
 
   return (
-    <div className="space-y-36">
+    <div className="space-y-24">
       {days.map((day, idx) => (
         <DaySection key={day.label} day={day} isDay1={idx === 0} />
       ))}
@@ -46,7 +46,7 @@ function DaySection({ day, isDay1 }: { day: DayBlock; isDay1: boolean }) {
       {/* Left Column: Sticky Tall Image Card with Overlays */}
       <div className="lg:sticky lg:top-32 lg:self-start">
         <Reveal>
-          <div className="relative overflow-hidden rounded-[24px] border border-border bg-surface aspect-[4/5] lg:h-[550px] w-full flex flex-col justify-between p-8 group shadow-2xl">
+          <div className="relative overflow-hidden rounded-[24px] border border-border bg-surface aspect-[4/5] lg:h-[480px] w-full flex flex-col justify-between p-8 group shadow-2xl">
             {/* Background Image with dark overlay */}
             <div className="absolute inset-0 z-0">
               <img
@@ -96,7 +96,7 @@ function DaySection({ day, isDay1 }: { day: DayBlock; isDay1: boolean }) {
           style={{ scaleY: timelineHeight, height: "96%" }}
         />
 
-        <div className="space-y-10">
+        <div className="space-y-6">
           {day.items.map((item, i) => (
             <TimelineItem
               key={item.time}
@@ -155,7 +155,7 @@ function TimelineItem({
 
       {/* Glass card container */}
       <motion.div
-        className={`group relative overflow-hidden rounded-[20px] border p-6 backdrop-blur-sm transition-all duration-500 ${
+        className={`group relative overflow-hidden rounded-[16px] border py-4 px-5 backdrop-blur-sm transition-all duration-500 ${
           active
             ? "border-border-hover bg-surface shadow-[0_4px_30px_rgba(129,140,248,0.02)]"
             : "border-border/50 bg-surface/10"
@@ -177,7 +177,7 @@ function TimelineItem({
         </span>
         
         {/* Formatted Title (using Anton font) */}
-        <h4 className={`mt-2 font-display text-xl md:text-2xl font-bold tracking-tight uppercase leading-none transition-colors duration-300 ${
+        <h4 className={`mt-1.5 font-display text-lg md:text-xl font-bold tracking-tight uppercase leading-none transition-colors duration-300 ${
           active ? "text-text" : "text-text-muted"
         }`}>
           {title}
