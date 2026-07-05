@@ -6,9 +6,9 @@
 export const EVENT = {
   name: "Agents of Change",
   subtitle: "National Agentic AI Bootcamp & Buildathon",
-  organizer: "OIST ACM-W Student Chapter",
+  organizer: "ACM and ACM-W Student Chapter",
   dates: "10–11 July 2026",
-  format: "2-Day Workshop + Team Buildathon",
+  format: "1-Day Workshop + 1-Day Buildathon",
 } as const;
 
 export const OVERVIEW = `The event is designed to introduce students to Agentic AI through an industry-led hands-on workshop followed by a practical buildathon. Participants will work in teams to build an AI agent that applies the concepts learned during the workshop. The objective is for every participant to leave with a working project and a clear understanding of planning, memory (RAG), tool calling and multi-agent workflows.`;
@@ -91,7 +91,7 @@ export const SCHEDULE = {
         time: "02:00–03:00",
         activity: "Buildathon Briefing, Team Formation & Problem Statement",
       },
-      { time: "03:00–06:00", activity: "Team Development with Mentor Interaction" },
+      { time: "03:00–04:30", activity: "Team Development with Mentor Interaction" },
       {
         time: "11:59 PM",
         activity: "Project Submission (GitHub + Demo Video)",
@@ -132,7 +132,7 @@ export const WHY_PARTICIPATE = [
     description: "Create opportunities for internships, placements, startup visibility, and industry-academia collaboration.",
   },
   {
-    title: "Buildverse Community",
+    title: "ACM OIST Community",
     description: "Join a long-term builder community built around deep-tech, product thinking, and real-world problem solving.",
   },
 ] as const;
@@ -168,5 +168,5 @@ export const FAQS = [
 ] as const;
 
 export const CONTACT = {
-  organizer: "OIST ACM-W",
+  organizer: "ACM and ACM-W Student Chapter",
 } as const;

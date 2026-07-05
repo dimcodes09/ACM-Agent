@@ -117,7 +117,10 @@ export default function Hero() {
           variants={item}
           className="mb-6 inline-flex items-center gap-2.5 rounded-full border border-border bg-surface-raised/80 px-4 py-1.5 font-mono-ui text-[10px] tracking-wider text-text uppercase"
         >
-          <img src="/acm-logo.png" alt="" className="h-3.5 w-3.5 object-contain flex-shrink-0" />
+          <div className="flex items-center -space-x-1.5 flex-shrink-0">
+            <img src="/acm-student.png" alt="ACM Student Chapter Logo" className="h-6 w-auto object-contain relative z-10" />
+            <img src="/acm-women.png" alt="ACM-W Student Chapter Logo" className="h-6 w-auto object-contain relative z-0" />
+          </div>
           {EVENT.organizer.toUpperCase()} Presents
         </motion.span>
 
@@ -192,7 +195,7 @@ export default function Hero() {
           ))}
         </div>
         <span className="font-mono-ui text-[10px] sm:text-[11px] uppercase tracking-[0.1em] text-muted-custom text-left">
-          Hosted at OIST Campus, Bhopal — by the ACM-W Student Chapter
+          Hosted at OIST Campus, Bhopal — by the ACM and ACM-W Student Chapter
         </span>
       </div>
     </section>

@@ -62,9 +62,6 @@ export default function WhyParticipate() {
 
                 {/* Text Content at the Bottom */}
                 <div className="absolute inset-x-0 bottom-0 p-6 z-20 space-y-3">
-                  <span className="font-mono-ui text-[9px] uppercase tracking-wider text-signal/80 select-none">
-                    // BENEFIT {String(i + 1).padStart(2, "0")}
-                  </span>
                   <h3 className="font-display text-2xl font-black text-white uppercase leading-[1.1] tracking-tight group-hover:text-signal transition-colors duration-300">
                     {benefit.title}
                   </h3>

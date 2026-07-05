@@ -52,7 +52,10 @@ export default function Nav() {
       >
         {/* Logo + name */}
         <Link href="/" className="flex items-center gap-3 shrink-0">
-          <img src="/acm-logo.png" alt="ACM" className="h-8 w-8 object-contain" />
+          <div className="flex items-center -space-x-3 shrink-0">
+            <img src="/acm-student.png" alt="ACM Student Chapter" className="h-10 w-auto object-contain relative z-10" />
+            <img src="/acm-women.png" alt="ACM-W Student Chapter" className="h-10 w-auto object-contain relative z-0" />
+          </div>
           <div className="flex flex-col leading-none">
             <span className="font-display text-base font-bold tracking-tight text-text whitespace-nowrap">
               {EVENT.name}

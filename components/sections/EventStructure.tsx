@@ -10,7 +10,7 @@ import { AnimatedBlueprintGrid } from "@/components/ui/SubtleBackgrounds";
 const STRUCTURE_ITEMS = [
   {
     icon: BookOpen,
-    title: "2-DAY IMMERSIVE WORKSHOP",
+    title: "1-DAY IMMERSIVE WORKSHOP",
     desc: "Understand Agentic AI workflows, LLM tool calling, RAG memory, and multi-agent coordination from industry mentors.",
   },
   {

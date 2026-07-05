@@ -151,11 +151,14 @@ export default function AgentBootLoader({
                 <span className="text-[9px] tracking-[0.25em] text-faint-custom-40 uppercase font-semibold">
                   ACM EVENT SYSTEM BOOT
                 </span>
-                <div className="flex items-center gap-3 mt-1">
-                  <img src="/acm-logo.png" alt="ACM Logo" className="h-7 w-auto object-contain brightness-110" />
+                 <div className="flex items-center gap-3 mt-1">
+                  <div className="flex items-center -space-x-3 h-10 flex-shrink-0">
+                    <img src="/acm-student.png" alt="ACM Student Chapter Logo" className="h-full w-auto object-contain relative z-10" />
+                    <img src="/acm-women.png" alt="ACM-W Student Chapter Logo" className="h-full w-auto object-contain relative z-0" />
+                  </div>
                   <div className="h-5 w-px bg-white/15" />
                   {/* Circular badge for OIST logo to handle non-transparent image edges cleanly */}
-                  <div className="flex h-7 w-7 items-center justify-center rounded-full bg-white p-1 shadow-inner">
+                  <div className="flex h-9 w-9 items-center justify-center rounded-full bg-white p-1.5 shadow-inner">
                     <img src="/oist-logo.png" alt="OIST Logo" className="h-full w-full object-contain" />
                   </div>
                 </div>
@@ -215,7 +218,7 @@ export default function AgentBootLoader({
 
         {/* Footer info below terminal */}
         <div className="w-full flex flex-col sm:flex-row items-center justify-between gap-3 text-[9px] tracking-[0.2em] text-faint-custom-30 uppercase font-mono-ui">
-          <span>OIST ACM-W STUDENT CHAPTER X AGENTS OF CHANGE 2026</span>
+          <span>ACM & ACM-W STUDENT CHAPTER X AGENTS OF CHANGE 2026</span>
           <span className="opacity-75">Press any key or click anywhere to skip</span>
         </div>
       </div>

@@ -37,8 +37,9 @@ export default function Contact() {
             <span className="font-mono-ui text-[10px] uppercase tracking-[0.25em] text-signal font-semibold">
               09 — CONTACT & LOCATION
             </span>
-            <div className="flex h-6 w-6 items-center justify-center rounded-full border border-white/15 bg-white/[0.06] backdrop-blur-sm overflow-hidden">
-              <img src="/acm-logo.png" alt="ACM" className="h-4 w-4 object-contain" />
+            <div className="flex h-9 items-center -space-x-2 rounded-full border border-white/15 bg-white/[0.06] px-3 py-0.5 backdrop-blur-sm">
+              <img src="/acm-student.png" alt="ACM Student" className="h-7 w-auto object-contain relative z-10" />
+              <img src="/acm-women.png" alt="ACM-W" className="h-7 w-auto object-contain relative z-0" />
             </div>
           </div>
 
@@ -47,7 +48,7 @@ export default function Contact() {
           </h2>
           <p className="mt-5 max-w-md text-sm md:text-base leading-relaxed text-muted-custom font-light">
             For questions about the bootcamp, team buildathon, or registration procedures,
-            reach out to the OIST ACM-W Student Chapter.
+            reach out to the ACM and ACM-W Student Chapter.
           </p>
         </Reveal>
 
@@ -150,7 +151,7 @@ export default function Contact() {
                           Chapter
                         </div>
                         <div className="mt-0.5 text-sm font-medium text-white">
-                          ACM-W Student Chapter
+                          ACM and ACM-W Student Chapter
                         </div>
                       </div>
                     </div>
