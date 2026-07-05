@@ -1,105 +1,195 @@
 "use client";
 
+import { MapPin, Users2, Globe2, Send } from "lucide-react";
 import Reveal from "@/components/ui/Reveal";
 import { CONTACT } from "@/data/event";
 
+// TODO: replace with your real inbox — used to build the mailto link on submit.
+const CONTACT_EMAIL = "reachoistacmw@gmail.com";
+
 export default function Contact() {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const name = (form.elements.namedItem("name") as HTMLInputElement)?.value ?? "";
+    const email = (form.elements.namedItem("email") as HTMLInputElement)?.value ?? "";
+    const subject =
+      (form.elements.namedItem("subject") as HTMLInputElement)?.value || `Inquiry from ${name}`;
+    const message = (form.elements.namedItem("message") as HTMLTextAreaElement)?.value ?? "";
+
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(`${message}\n\n— ${name} (${email})`)}`;
+  };
+
   return (
-    <section id="contact" className="relative overflow-hidden px-6 py-28 md:py-36 bg-[#0e1015] border-t border-border">
-      <div className="mx-auto max-w-6xl relative z-10">
-        <div className="grid gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20 lg:items-center">
-          
-          {/* Left Column: Contact details */}
-          <Reveal>
-            <span className="inline-block font-mono-ui text-[10px] uppercase tracking-[0.25em] text-signal font-semibold">
+    <section id="contact" className="relative isolate overflow-hidden px-6 py-28 md:py-36 border-t border-border">
+      {/* Full-bleed campus photograph as the section background */}
+      <div className="absolute inset-0 -z-10">
+        <img src="/campus.jpg" alt="" className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0d18]/92 via-[#0a0d18]/90 to-[#0a0d18]" />
+        <div className="absolute inset-0 bg-[#0a0d18]/35" />
+      </div>
+
+      <div className="mx-auto max-w-5xl relative z-10">
+        <Reveal className="max-w-2xl">
+          <div className="flex items-center gap-3">
+            <span className="font-mono-ui text-[10px] uppercase tracking-[0.25em] text-signal font-semibold">
               09 — CONTACT & LOCATION
             </span>
-            <h2 className="mt-4 font-display text-5xl md:text-6xl font-black tracking-tight text-text uppercase leading-none">
-              {CONTACT.organizer}
-            </h2>
-            <p className="mt-5 max-w-md text-sm md:text-base leading-relaxed text-text-muted font-light">
-              For questions about the bootcamp, team buildathon, or registration procedures,
-              reach out to the OIST ACM-W Student Chapter.
-            </p>
-            
-            {/* Tech-inspired coordinate facts */}
-            <div className="mt-10 space-y-4 border-t border-border pt-8 max-w-sm">
-              <div className="flex justify-between text-xs font-mono-ui">
-                <span className="text-text-faint uppercase">CAMPUS</span>
-                <span className="font-semibold text-text-muted">OIST Campus, Bhopal</span>
-              </div>
-              <div className="flex justify-between text-xs font-mono-ui">
-                <span className="text-text-faint uppercase">CHAPTER</span>
-                <span className="font-semibold text-text-muted">ACM-W Student Chapter</span>
-              </div>
-              <div className="flex justify-between text-xs font-mono-ui">
-                <span className="text-text-faint uppercase">REGION</span>
-                <span className="font-semibold text-text-muted">Madhya Pradesh, India</span>
-              </div>
+            <div className="flex h-6 w-6 items-center justify-center rounded-full border border-white/15 bg-white/[0.06] backdrop-blur-sm overflow-hidden">
+              <img src="/acm-logo.png" alt="ACM" className="h-4 w-4 object-contain" />
             </div>
-          </Reveal>
+          </div>
 
-          {/* Right Column: Abstract Campus Positioning Map (Blueprint Style) */}
-          <Reveal delay={0.05}>
-            <div className="relative aspect-[4/3] w-full rounded-2xl border border-border bg-surface/40 p-4 backdrop-blur-sm overflow-hidden flex items-center justify-center">
-              <CampusPositioningMap />
+          <h2 className="mt-4 font-display text-5xl md:text-6xl font-black tracking-tight text-text uppercase leading-none">
+            {CONTACT.organizer}
+          </h2>
+          <p className="mt-5 max-w-md text-sm md:text-base leading-relaxed text-text-muted font-light">
+            For questions about the bootcamp, team buildathon, or registration procedures,
+            reach out to the OIST ACM-W Student Chapter.
+          </p>
+        </Reveal>
+
+        {/* Glass panel: form + find us */}
+        <Reveal delay={0.05}>
+          <div className="mt-14 rounded-[28px] border border-white/10 bg-white/[0.05] backdrop-blur-xl overflow-hidden shadow-[0_30px_80px_-20px_rgba(0,0,0,0.6)]">
+            <div className="grid md:grid-cols-[1.1fr_0.9fr]">
+              {/* Send a message */}
+              <form onSubmit={handleSubmit} className="p-8 md:p-10 border-b md:border-b-0 md:border-r border-white/10">
+                <h3 className="font-display text-xl font-bold text-white uppercase tracking-tight">
+                  Send a message
+                </h3>
+
+                <div className="mt-6 grid sm:grid-cols-2 gap-5">
+                  <label className="block">
+                    <span className="font-mono-ui text-[9px] uppercase tracking-[0.15em] text-white/40">
+                      Full Name
+                    </span>
+                    <input
+                      name="name"
+                      type="text"
+                      required
+                      placeholder="Your name"
+                      className="mt-1.5 w-full bg-transparent border-b border-white/15 pb-2 text-sm text-white placeholder:text-white/25 focus:border-signal focus:outline-none transition-colors"
+                    />
+                  </label>
+                  <label className="block">
+                    <span className="font-mono-ui text-[9px] uppercase tracking-[0.15em] text-white/40">
+                      Email Address
+                    </span>
+                    <input
+                      name="email"
+                      type="email"
+                      required
+                      placeholder="you@email.com"
+                      className="mt-1.5 w-full bg-transparent border-b border-white/15 pb-2 text-sm text-white placeholder:text-white/25 focus:border-signal focus:outline-none transition-colors"
+                    />
+                  </label>
+                  <label className="block sm:col-span-2">
+                    <span className="font-mono-ui text-[9px] uppercase tracking-[0.15em] text-white/40">
+                      Subject
+                    </span>
+                    <input
+                      name="subject"
+                      type="text"
+                      placeholder="Registration, sponsorship, media..."
+                      className="mt-1.5 w-full bg-transparent border-b border-white/15 pb-2 text-sm text-white placeholder:text-white/25 focus:border-signal focus:outline-none transition-colors"
+                    />
+                  </label>
+                  <label className="block sm:col-span-2">
+                    <span className="font-mono-ui text-[9px] uppercase tracking-[0.15em] text-white/40">
+                      Your Message
+                    </span>
+                    <textarea
+                      name="message"
+                      rows={3}
+                      required
+                      placeholder="Tell us what you need..."
+                      className="mt-1.5 w-full bg-transparent border-b border-white/15 pb-2 text-sm text-white placeholder:text-white/25 focus:border-signal focus:outline-none transition-colors resize-none"
+                    />
+                  </label>
+                </div>
+
+                <button
+                  type="submit"
+                  className="mt-8 inline-flex items-center gap-2 rounded-full bg-signal text-[#0a0d18] font-mono-ui text-xs font-semibold uppercase tracking-[0.1em] px-6 py-3 hover:brightness-110 transition-all"
+                >
+                  Send Message <Send className="h-3.5 w-3.5" />
+                </button>
+              </form>
+
+              {/* Find us */}
+              <div className="p-8 md:p-10 flex flex-col justify-between">
+                <div>
+                  <h3 className="font-display text-xl font-bold text-white uppercase tracking-tight mb-6">
+                    Find us
+                  </h3>
+
+                  <div className="space-y-6">
+                    <div className="flex items-start gap-3">
+                      <div className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/[0.04] flex-shrink-0">
+                        <MapPin className="h-4 w-4 text-signal" />
+                      </div>
+                      <div>
+                        <div className="font-mono-ui text-[9px] uppercase tracking-[0.15em] text-white/40">
+                          Campus
+                        </div>
+                        <div className="mt-0.5 text-sm font-medium text-white">
+                          OIST Campus, Bhopal
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3">
+                      <div className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/[0.04] flex-shrink-0">
+                        <Users2 className="h-4 w-4 text-signal" />
+                      </div>
+                      <div>
+                        <div className="font-mono-ui text-[9px] uppercase tracking-[0.15em] text-white/40">
+                          Chapter
+                        </div>
+                        <div className="mt-0.5 text-sm font-medium text-white">
+                          ACM-W Student Chapter
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3">
+                      <div className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/[0.04] flex-shrink-0">
+                        <Globe2 className="h-4 w-4 text-signal" />
+                      </div>
+                      <div>
+                        <div className="font-mono-ui text-[9px] uppercase tracking-[0.15em] text-white/40">
+                          Region
+                        </div>
+                        <div className="mt-0.5 text-sm font-medium text-white">
+                          Madhya Pradesh, India
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Small photo credential */}
+                <div className="relative mt-8 h-32 rounded-xl overflow-hidden border border-white/10">
+                  <img src="/campus.jpg" alt="OIST Campus" className="w-full h-full object-cover" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0d18]/80 via-transparent to-transparent" />
+                  <div className="absolute top-3 right-3 flex h-8 w-8 items-center justify-center rounded-full border border-white/15 bg-black/30 backdrop-blur-sm overflow-hidden">
+                    <img src="/oist-logo.png" alt="OIST" className="h-5 w-5 object-contain" />
+                  </div>
+                  <div className="absolute bottom-3 left-3 flex items-center gap-1.5">
+                    <MapPin className="h-3 w-3 text-signal" />
+                    <span className="font-mono-ui text-[9px] uppercase tracking-[0.1em] text-white/90">
+                      OIST Campus
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
-          </Reveal>
-        </div>
+          </div>
+        </Reveal>
       </div>
     </section>
-  );
-}
-
-function CampusPositioningMap() {
-  return (
-    <svg
-      viewBox="0 0 320 240"
-      className="w-full h-full relative z-10"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <defs>
-        <pattern id="contact-grid" width="16" height="16" patternUnits="userSpaceOnUse">
-          <path
-            d="M 16 0 L 0 0 0 16"
-            fill="none"
-            stroke="var(--color-border)"
-            strokeWidth="0.4"
-          />
-        </pattern>
-      </defs>
-
-      {/* Grid Backplane */}
-      <rect width="320" height="240" fill="url(#contact-grid)" />
-      
-      {/* Coordinate lines axes */}
-      <line x1="0" y1="100" x2="320" y2="100" stroke="var(--color-border-hover)" strokeWidth="1" />
-      <line x1="180" y1="0" x2="180" y2="240" stroke="var(--color-border-hover)" strokeWidth="1" />
-
-      {/* Static radar/range rings */}
-      <circle cx="180" cy="100" r="50" stroke="var(--color-border)" strokeWidth="0.6" strokeDasharray="3 3" />
-      <circle cx="180" cy="100" r="80" stroke="var(--color-border)" strokeWidth="0.6" strokeDasharray="3 3" />
-
-      {/* Target locator pin */}
-      <g>
-        <circle cx="180" cy="100" r="5" fill="var(--color-signal)" />
-        <circle cx="180" cy="100" r="2" fill="var(--color-base)" />
-        <circle cx="180" cy="100" r="10" stroke="var(--color-signal)" strokeWidth="0.8" strokeOpacity="0.4" />
-      </g>
-
-      {/* Bhopal city coordinate text tag */}
-      <g transform="translate(192, 82)">
-        <rect width="105" height="34" rx="3" fill="var(--color-surface-raised)" stroke="var(--color-border)" strokeWidth="1" />
-        <text x="8" y="14" fill="var(--color-text)" fontSize="7" fontWeight="600" fontFamily="var(--font-mono)">OIST_CAMPUS // IND</text>
-        <text x="8" y="24" fill="var(--color-active)" fontSize="6" fontFamily="var(--font-mono)">LOC :: 23.26N 77.41E</text>
-      </g>
-
-      {/* Grid tick mark decorators */}
-      <path d="M 12 12 H 20 M 12 12 V 20" stroke="var(--color-text-faint)" strokeWidth="0.8" />
-      <path d="M 308 12 H 300 M 308 12 V 20" stroke="var(--color-text-faint)" strokeWidth="0.8" />
-      <path d="M 12 228 H 20 M 12 228 V 220" stroke="var(--color-text-faint)" strokeWidth="0.8" />
-      <path d="M 308 228 H 300 M 308 228 V 220" stroke="var(--color-text-faint)" strokeWidth="0.8" />
-    </svg>
   );
 }

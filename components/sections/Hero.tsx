@@ -1,6 +1,7 @@
 "use client";
 
-import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { motion, useScroll, useTransform, useReducedMotion, useInView } from "framer-motion";
 import { EVENT } from "@/data/event";
 
 const container = {
@@ -19,6 +20,49 @@ const item = {
   },
 };
 
+// Placeholder figures — swap for your real projected numbers before shipping.
+const STATS = [
+  { value: 2, suffix: "", label: "Days of Programming" },
+  { value: 7, suffix: "+", label: "Core Learning Outcomes" },
+  { value: 50, suffix: "+", label: "Teams Expected" },
+  { value: 10, suffix: "+", label: "Industry Mentors" },
+];
+
+// Real photography, reused from elsewhere on the site for visual consistency.
+const TRUST_PHOTOS = [
+  "/campus.jpg",
+  "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=200&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=200&auto=format&fit=crop",
+];
+
+function Counter({ value, suffix = "" }: { value: number; suffix?: string }) {
+  const ref = useRef<HTMLSpanElement>(null);
+  const isInView = useInView(ref, { once: true, margin: "-10% 0px -10% 0px" });
+  const [display, setDisplay] = useState(0);
+
+  useEffect(() => {
+    if (!isInView) return;
+    let start: number | null = null;
+    const duration = 1600;
+    const step = (ts: number) => {
+      if (start === null) start = ts;
+      const progress = Math.min((ts - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setDisplay(Math.round(eased * value));
+      if (progress < 1) requestAnimationFrame(step);
+    };
+    const raf = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(raf);
+  }, [isInView, value]);
+
+  return (
+    <span ref={ref}>
+      {display}
+      {suffix}
+    </span>
+  );
+}
+
 export default function Hero() {
   const reduce = useReducedMotion();
   const { scrollY } = useScroll();
@@ -30,13 +74,13 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-[92svh] w-full flex-col items-center justify-center overflow-hidden px-6 text-center bg-gradient-to-b from-[#0e1015] to-[#08090c]"
+      className="relative flex min-h-[92svh] w-full flex-col items-center justify-center overflow-hidden px-6 py-24 text-center bg-gradient-to-b from-[#0e1015] to-[#08090c]"
     >
-      {/* Handcrafted background environment: subtle dark grids and soft central graphite glow */}
+      {/* Handcrafted background environment: subtle dark grids, soft glow, and editorial wordmark */}
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
         {/* Soft, clean radial spotlight */}
         <div className="absolute left-1/2 top-1/2 h-[550px] w-[550px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-signal/5 blur-[110px]" />
-        
+
         {/* Subtle, static technical grid sheet */}
         <svg className="absolute inset-0 h-full w-full opacity-[0.02]" xmlns="http://www.w3.org/2000/svg">
           <defs>
@@ -46,6 +90,17 @@ export default function Hero() {
           </defs>
           <rect width="100%" height="100%" fill="url(#hero-grid)" />
         </svg>
+
+        {/* Editorial ghost wordmark — sits in the open band above the headline, not underneath it,
+            so it's actually visible instead of hidden behind solid white type. */}
+        <div className="absolute top-[9%] sm:top-[10%] inset-x-0 flex justify-center select-none">
+          <span
+            className="font-display font-black leading-none tracking-tight whitespace-nowrap text-[clamp(4.5rem,16vw,13rem)]"
+            style={{ color: "transparent", WebkitTextStroke: "1.4px rgba(255,255,255,0.08)" }}
+          >
+            ACM
+          </span>
+        </div>
 
         {/* Clean, structural horizontal lines defining layout boundaries */}
         <div className="absolute bottom-0 inset-x-0 h-[1px] bg-[var(--color-border)]/50" />
@@ -60,9 +115,9 @@ export default function Hero() {
       >
         <motion.span
           variants={item}
-          className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-surface-raised/80 px-4 py-1.5 font-mono-ui text-[10px] tracking-wider text-text uppercase"
+          className="mb-6 inline-flex items-center gap-2.5 rounded-full border border-border bg-surface-raised/80 px-4 py-1.5 font-mono-ui text-[10px] tracking-wider text-text uppercase"
         >
-          <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-signal)]" />
+          <img src="/acm-logo.png" alt="" className="h-3.5 w-3.5 object-contain flex-shrink-0" />
           {EVENT.organizer.toUpperCase()} Presents
         </motion.span>
 
@@ -104,6 +159,40 @@ export default function Hero() {
           </a>
         </motion.div>
       </motion.div>
+
+      {/* Impact in Numbers — independent of hero fade, counts up when scrolled into view */}
+      <div className="relative z-10 mt-20 md:mt-28 w-full max-w-3xl mx-auto border-t border-border/40 pt-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-4 text-center">
+          {STATS.map((s) => (
+            <div key={s.label} className="flex flex-col items-center">
+              <div className="font-display text-4xl sm:text-5xl font-black text-text tracking-tight tabular-nums">
+                <Counter value={s.value} suffix={s.suffix} />
+              </div>
+              <div className="mt-2 font-mono-ui text-[9px] sm:text-[10px] uppercase tracking-[0.15em] text-text-muted max-w-[10ch] sm:max-w-none mx-auto">
+                {s.label}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Photographic trust strip — a human, authentic touch grounding the event in real people and place */}
+      <div className="relative z-10 mt-12 flex items-center gap-4 rounded-full border border-border bg-surface-raised/60 backdrop-blur-sm pl-2 pr-5 py-2">
+        <div className="flex -space-x-3">
+          {TRUST_PHOTOS.map((src, i) => (
+            <img
+              key={src}
+              src={src}
+              alt=""
+              className="h-9 w-9 rounded-full object-cover border-2 border-[#0e1015]"
+              style={{ zIndex: TRUST_PHOTOS.length - i }}
+            />
+          ))}
+        </div>
+        <span className="font-mono-ui text-[10px] sm:text-[11px] uppercase tracking-[0.1em] text-text-muted text-left">
+          Hosted at OIST Campus, Bhopal — by the ACM-W Student Chapter
+        </span>
+      </div>
     </section>
   );
 }
