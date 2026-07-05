@@ -14,7 +14,7 @@ export default function FAQ() {
         <div className="text-center max-w-2xl mx-auto mb-16">
           <Reveal>
             <span className="inline-block font-mono-ui text-[10px] uppercase tracking-[0.25em] text-signal font-semibold">
-              08 — FAQ
+              FAQ
             </span>
             <h2 className="mt-4 font-display text-5xl md:text-6xl font-black tracking-tight text-text uppercase leading-none">
               Frequently asked questions.

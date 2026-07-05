@@ -51,7 +51,7 @@ export default function About() {
           <div>
             <Reveal>
               <span className="inline-block font-mono-ui text-[10px] uppercase tracking-[0.25em] text-signal font-semibold">
-                01 — ABOUT THE EVENT
+                ABOUT THE EVENT
               </span>
               <h2 className="mt-4 font-display text-5xl md:text-6xl font-black tracking-tight text-text uppercase leading-none">
                 A workshop first.<br />

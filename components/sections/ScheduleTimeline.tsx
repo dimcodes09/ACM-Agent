@@ -74,9 +74,6 @@ function DaySection({ day, isDay1 }: { day: DayBlock; isDay1: boolean }) {
 
             {/* Title at the bottom */}
             <div className="relative z-10">
-              <span className="font-mono-ui text-[10px] tracking-[0.25em] text-signal uppercase font-semibold">
-                // {isDay1 ? "Workshop Flow" : "Evaluation Flow"}
-              </span>
               <h3 className="mt-2 font-display text-2xl md:text-3xl font-bold tracking-tight text-text uppercase">
                 {day.heading}
               </h3>

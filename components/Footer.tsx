@@ -84,7 +84,7 @@ export default function Footer() {
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-signal shrink-0" />
                 <a href="mailto:acm@oist.bhopal.edu" className="hover:text-white transition-colors duration-200">
-                  acm@oist.bhopal.edu
+                  oistacm@oriental.ac.in
                 </a>
               </li>
             </ul>

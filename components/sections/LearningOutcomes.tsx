@@ -104,7 +104,7 @@ export default function LearningOutcomes() {
       <div className="mx-auto max-w-6xl w-full relative z-10 flex flex-col items-center">
         <Reveal className="max-w-2xl text-center mb-16">
           <span className="inline-block font-mono-ui text-[10px] uppercase tracking-[0.25em] text-signal font-semibold">
-            03 — LEARNING OUTCOMES
+            LEARNING OUTCOMES
           </span>
           <h2 className="mt-4 font-display text-4xl md:text-6xl font-black tracking-tight text-text uppercase leading-none">
             What you&apos;ll walk away with.

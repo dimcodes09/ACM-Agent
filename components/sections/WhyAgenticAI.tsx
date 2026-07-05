@@ -40,7 +40,7 @@ export default function WhyAgenticAI() {
           <div className="lg:sticky lg:top-24 space-y-12">
             <Reveal>
               <span className="inline-block font-mono-ui text-[10px] uppercase tracking-[0.25em] text-signal font-semibold">
-                02 — WHY AGENTIC AI
+                WHY AGENTIC AI
               </span>
               <h2 className="mt-4 font-display text-5xl md:text-6xl font-black tracking-tight text-text uppercase leading-none">
                 Software that reasons,<br />not just responds.

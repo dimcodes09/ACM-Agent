@@ -12,7 +12,7 @@ export default function BuildathonTheme() {
       <div className="mx-auto max-w-6xl">
         <Reveal className="mb-12 max-w-2xl">
           <span className="inline-block font-mono-ui text-[10px] uppercase tracking-[0.25em] text-signal font-semibold">
-            05 — BUILDATHON THEME
+            BUILDATHON THEME
           </span>
         </Reveal>
 

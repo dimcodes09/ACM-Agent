@@ -41,7 +41,7 @@ export default function RegisterCTA() {
       <div className="mx-auto max-w-4xl text-center relative z-10">
         <Reveal>
           <span className="inline-block font-mono-ui text-[10px] uppercase tracking-[0.25em] text-signal font-semibold">
-            07 — REGISTRATION
+            REGISTRATION
           </span>
           <h2 className="mt-5 font-display text-5xl md:text-7xl font-black tracking-tight text-text uppercase leading-none">
             Reserve your spot.

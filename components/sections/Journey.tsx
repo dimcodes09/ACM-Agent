@@ -91,7 +91,7 @@ export default function Journey() {
       <div className="mx-auto max-w-5xl w-full relative z-10">
         <Reveal className="max-w-2xl text-center mb-14 mx-auto">
           <span className="inline-block font-mono-ui text-[10px] uppercase tracking-[0.25em] text-signal font-semibold">
-            04 — THE JOURNEY
+            THE JOURNEY
           </span>
           <h2 className="mt-4 font-display text-4xl md:text-6xl font-black tracking-tight text-text uppercase leading-none">
             One continuous trace, start to finish.

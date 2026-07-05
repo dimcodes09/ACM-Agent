@@ -35,7 +35,7 @@ export default function Contact() {
         <Reveal className="max-w-2xl">
           <div className="flex items-center gap-3">
             <span className="font-mono-ui text-[10px] uppercase tracking-[0.25em] text-signal font-semibold">
-              09 — CONTACT & LOCATION
+              CONTACT & LOCATION
             </span>
             <div className="flex h-9 items-center -space-x-2 rounded-full border border-white/15 bg-white/[0.06] px-3 py-0.5 backdrop-blur-sm">
               <img src="/acm-student.png" alt="ACM Student" className="h-7 w-auto object-contain relative z-10" />
