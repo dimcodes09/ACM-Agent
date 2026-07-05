@@ -45,7 +45,7 @@ export default function Contact() {
           <h2 className="mt-4 font-display text-5xl md:text-6xl font-black tracking-tight text-text uppercase leading-none">
             {CONTACT.organizer}
           </h2>
-          <p className="mt-5 max-w-md text-sm md:text-base leading-relaxed text-white/75 font-light">
+          <p className="mt-5 max-w-md text-sm md:text-base leading-relaxed text-muted-custom font-light">
             For questions about the bootcamp, team buildathon, or registration procedures,
             reach out to the OIST ACM-W Student Chapter.
           </p>
@@ -63,7 +63,7 @@ export default function Contact() {
 
                 <div className="mt-6 grid sm:grid-cols-2 gap-5">
                   <label className="block">
-                    <span className="font-mono-ui text-[9px] uppercase tracking-[0.15em] text-white/40">
+                    <span className="font-mono-ui text-[9px] uppercase tracking-[0.15em] text-faint-custom-40">
                       Full Name
                     </span>
                     <input
@@ -71,11 +71,11 @@ export default function Contact() {
                       type="text"
                       required
                       placeholder="Your name"
-                      className="mt-1.5 w-full bg-transparent border-b border-white/15 pb-2 text-sm text-white placeholder:text-white/25 focus:border-border-hover focus:outline-none transition-colors"
+                      className="mt-1.5 w-full bg-transparent border-b border-white/15 pb-2 text-sm text-white placeholder:text-faint-custom-25 focus:border-border-hover focus:outline-none transition-colors"
                     />
                   </label>
                   <label className="block">
-                    <span className="font-mono-ui text-[9px] uppercase tracking-[0.15em] text-white/40">
+                    <span className="font-mono-ui text-[9px] uppercase tracking-[0.15em] text-faint-custom-40">
                       Email Address
                     </span>
                     <input
@@ -83,22 +83,22 @@ export default function Contact() {
                       type="email"
                       required
                       placeholder="you@email.com"
-                      className="mt-1.5 w-full bg-transparent border-b border-white/15 pb-2 text-sm text-white placeholder:text-white/25 focus:border-border-hover focus:outline-none transition-colors"
+                      className="mt-1.5 w-full bg-transparent border-b border-white/15 pb-2 text-sm text-white placeholder:text-faint-custom-25 focus:border-border-hover focus:outline-none transition-colors"
                     />
                   </label>
                   <label className="block sm:col-span-2">
-                    <span className="font-mono-ui text-[9px] uppercase tracking-[0.15em] text-white/40">
+                    <span className="font-mono-ui text-[9px] uppercase tracking-[0.15em] text-faint-custom-40">
                       Subject
                     </span>
                     <input
                       name="subject"
                       type="text"
                       placeholder="Registration, sponsorship, media..."
-                      className="mt-1.5 w-full bg-transparent border-b border-white/15 pb-2 text-sm text-white placeholder:text-white/25 focus:border-border-hover focus:outline-none transition-colors"
+                      className="mt-1.5 w-full bg-transparent border-b border-white/15 pb-2 text-sm text-white placeholder:text-faint-custom-25 focus:border-border-hover focus:outline-none transition-colors"
                     />
                   </label>
                   <label className="block sm:col-span-2">
-                    <span className="font-mono-ui text-[9px] uppercase tracking-[0.15em] text-white/40">
+                    <span className="font-mono-ui text-[9px] uppercase tracking-[0.15em] text-faint-custom-40">
                       Your Message
                     </span>
                     <textarea
@@ -106,7 +106,7 @@ export default function Contact() {
                       rows={3}
                       required
                       placeholder="Tell us what you need..."
-                      className="mt-1.5 w-full bg-transparent border-b border-white/15 pb-2 text-sm text-white placeholder:text-white/25 focus:border-border-hover focus:outline-none transition-colors resize-none"
+                      className="mt-1.5 w-full bg-transparent border-b border-white/15 pb-2 text-sm text-white placeholder:text-faint-custom-25 focus:border-border-hover focus:outline-none transition-colors resize-none"
                     />
                   </label>
                 </div>
@@ -132,7 +132,7 @@ export default function Contact() {
                         <MapPin className="h-4 w-4 text-signal" />
                       </div>
                       <div>
-                        <div className="font-mono-ui text-[9px] uppercase tracking-[0.15em] text-white/40">
+                        <div className="font-mono-ui text-[9px] uppercase tracking-[0.15em] text-faint-custom-40">
                           Campus
                         </div>
                         <div className="mt-0.5 text-sm font-medium text-white">
@@ -146,7 +146,7 @@ export default function Contact() {
                         <Users2 className="h-4 w-4 text-signal" />
                       </div>
                       <div>
-                        <div className="font-mono-ui text-[9px] uppercase tracking-[0.15em] text-white/40">
+                        <div className="font-mono-ui text-[9px] uppercase tracking-[0.15em] text-faint-custom-40">
                           Chapter
                         </div>
                         <div className="mt-0.5 text-sm font-medium text-white">
@@ -160,7 +160,7 @@ export default function Contact() {
                         <Globe2 className="h-4 w-4 text-signal" />
                       </div>
                       <div>
-                        <div className="font-mono-ui text-[9px] uppercase tracking-[0.15em] text-white/40">
+                        <div className="font-mono-ui text-[9px] uppercase tracking-[0.15em] text-faint-custom-40">
                           Region
                         </div>
                         <div className="mt-0.5 text-sm font-medium text-white">

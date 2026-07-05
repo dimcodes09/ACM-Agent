@@ -59,7 +59,7 @@ export default function WhyAgenticAI() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-base)]/30 to-transparent" />
                 </div>
-                <div className="mt-4 px-2 pb-1 flex justify-between items-center font-mono-ui text-[9px] tracking-wider text-white/55 uppercase select-none">
+                <div className="mt-4 px-2 pb-1 flex justify-between items-center font-mono-ui text-[9px] tracking-wider text-faint-custom uppercase select-none">
                   <span className="flex items-center gap-1.5">
                     <span className="h-1 w-1 rounded-full bg-signal animate-pulse" />
                     Figure 02 // Core Reasoning Architecture
@@ -124,7 +124,7 @@ function WhyRow({
         <span className="font-mono-ui text-xs tracking-wider text-signal/70 group-hover:text-signal font-semibold transition-colors duration-300">
           {indexStr}.
         </span>
-        <span className="font-mono-ui text-[9px] uppercase tracking-widest text-white/55 mt-1 select-none">
+        <span className="font-mono-ui text-[9px] uppercase tracking-widest text-faint-custom mt-1 select-none">
           {label}
         </span>
       </div>
@@ -134,7 +134,7 @@ function WhyRow({
         <h3 className="font-display text-xl font-bold tracking-tight text-text uppercase group-hover:text-white transition-colors duration-300">
           {title}
         </h3>
-        <p className="text-sm leading-relaxed text-white/75 group-hover:text-white/75 font-light transition-colors duration-300">
+        <p className="text-sm leading-relaxed text-muted-custom group-hover:text-muted-custom font-light transition-colors duration-300">
           {body}
         </p>
       </div>

@@ -109,7 +109,7 @@ export default function LearningOutcomes() {
           <h2 className="mt-4 font-display text-4xl md:text-6xl font-black tracking-tight text-text uppercase leading-none">
             What you&apos;ll walk away with.
           </h2>
-          <p className="mt-4 text-sm text-white/75 font-light max-w-md mx-auto">
+          <p className="mt-4 text-sm text-muted-custom font-light max-w-md mx-auto">
             Seven skills, taught in sequence. Swipe or use the controls below.
           </p>
         </Reveal>
@@ -249,13 +249,13 @@ export default function LearningOutcomes() {
                     {o.title}
                   </h3>
 
-                  <p className="mt-3 text-[13px] sm:text-sm leading-relaxed text-white/55 font-light line-clamp-3">
+                  <p className="mt-3 text-[13px] sm:text-sm leading-relaxed text-faint-custom font-light line-clamp-3">
                     {o.description}
                   </p>
 
                   {/* Footer — index + subtle "explore" affordance, no boilerplate spec tags */}
                   <div className="mt-auto pt-4 border-t border-white/[0.07] flex items-center justify-between">
-                    <span className="font-mono-ui text-[9px] text-white/30 tracking-[0.15em] uppercase">
+                    <span className="font-mono-ui text-[9px] text-faint-custom-30 tracking-[0.15em] uppercase">
                       {indexLabel} / {String(N).padStart(2, "0")} — CONF 2026
                     </span>
                     <ArrowUpRight

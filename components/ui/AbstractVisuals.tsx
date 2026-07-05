@@ -9,7 +9,7 @@ export function AgentArchitectureDiagram({ className = "" }: { className?: strin
   return (
     <div className={`relative w-full overflow-hidden rounded-2xl border border-border bg-surface-raised/30 p-6 ${className}`}>
       {/* Technical coordinate header */}
-      <div className="flex justify-between items-center mb-6 border-b border-border pb-3 font-mono-ui text-[9px] tracking-wider text-white/55">
+      <div className="flex justify-between items-center mb-6 border-b border-border pb-3 font-mono-ui text-[9px] tracking-wider text-faint-custom">
         <span>SCHEMA // AGENT_CORE_v1.2</span>
         <span>STATUS: SYS_OK</span>
       </div>
@@ -103,7 +103,7 @@ export function MultiAgentOrchestrationDiagram({ className = "" }: { className?:
 
   return (
     <div className={`relative w-full overflow-hidden rounded-2xl border border-border bg-surface-raised/30 p-6 ${className}`}>
-      <div className="flex justify-between items-center mb-6 border-b border-border pb-3 font-mono-ui text-[9px] tracking-wider text-white/55">
+      <div className="flex justify-between items-center mb-6 border-b border-border pb-3 font-mono-ui text-[9px] tracking-wider text-faint-custom">
         <span>SCHEMA // MULTI_AGENT_FLOW</span>
         <span>COORDINATION: ACTIVE</span>
       </div>
@@ -164,7 +164,7 @@ export function MultiAgentOrchestrationDiagram({ className = "" }: { className?:
 export function VectorSpaceRetrievalPlot({ className = "" }: { className?: string }) {
   return (
     <div className={`relative w-full overflow-hidden rounded-2xl border border-border bg-surface-raised/30 p-6 ${className}`}>
-      <div className="flex justify-between items-center mb-6 border-b border-border pb-3 font-mono-ui text-[9px] tracking-wider text-white/55">
+      <div className="flex justify-between items-center mb-6 border-b border-border pb-3 font-mono-ui text-[9px] tracking-wider text-faint-custom">
         <span>DATAPLOT // VECTOR_RETRIEVAL_2D</span>
         <span>INDEX: COMPLETED</span>
       </div>
@@ -210,7 +210,7 @@ export function CampusAIAssistantBlueprint({ className = "" }: { className?: str
   return (
     <div className={`relative w-full overflow-hidden rounded-2xl border border-border bg-base/80 p-6 ${className}`}>
       {/* Corner labels */}
-      <div className="flex justify-between items-center mb-5 border-b border-border pb-3 font-mono-ui text-[8.5px] tracking-wider text-white/55">
+      <div className="flex justify-between items-center mb-5 border-b border-border pb-3 font-mono-ui text-[8.5px] tracking-wider text-faint-custom">
         <span>PROJECT // CAMPUS_AI_SCHEMATIC</span>
         <span>REVISION // 1.0.4</span>
       </div>

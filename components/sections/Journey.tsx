@@ -108,10 +108,10 @@ export default function Journey() {
             >
               <span
                 className={`font-mono-ui text-xs uppercase tracking-[0.15em] font-semibold transition-colors ${
-                  idx === activeDay ? "text-white" : "text-white/35 group-hover:text-white/60"
+                  idx === activeDay ? "text-white" : "text-faint-custom-30 group-hover:text-white/60"
                 }`}
               >
-                {d.label} <span className="text-white/30">·</span> {d.tag}
+                {d.label} <span className="text-faint-custom-30">·</span> {d.tag}
               </span>
               <div className="w-24 sm:w-36 h-[3px] rounded-full bg-white/10 overflow-hidden">
                 {idx === activeDay && (
@@ -180,7 +180,7 @@ export default function Journey() {
                           {day.date}
                         </p>
                       </div>
-                      <span className="font-mono-ui text-[10px] uppercase tracking-[0.15em] text-white/40">
+                      <span className="font-mono-ui text-[10px] uppercase tracking-[0.15em] text-faint-custom-40">
                         {day.location}
                       </span>
                     </div>
@@ -201,13 +201,13 @@ export default function Journey() {
                           className="relative group"
                         >
                           <div className="absolute -left-6 top-1.5 h-[7px] w-[7px] rounded-full bg-white/25 group-hover:bg-signal transition-colors" />
-                          <span className="font-mono-ui text-[11px] uppercase tracking-[0.1em] text-white/40">
+                          <span className="font-mono-ui text-[11px] uppercase tracking-[0.1em] text-faint-custom-40">
                             {item.time}
                           </span>
                           <h4 className="mt-1 font-display text-lg sm:text-xl font-bold tracking-tight text-white uppercase leading-tight">
                             {item.title}
                           </h4>
-                          <p className="mt-1 text-[13px] sm:text-sm leading-relaxed text-white/50 font-light max-w-md">
+                          <p className="mt-1 text-[13px] sm:text-sm leading-relaxed text-faint-custom font-light max-w-md">
                             {item.description}
                           </p>
                         </motion.div>

@@ -57,14 +57,14 @@ export default function Nav() {
             <span className="font-display text-base font-bold tracking-tight text-text whitespace-nowrap">
               {EVENT.name}
             </span>
-            <span className="hidden sm:block font-mono-ui text-[9px] font-medium uppercase tracking-[0.18em] text-white/55 whitespace-nowrap mt-1">
+            <span className="hidden sm:block font-mono-ui text-[9px] font-medium uppercase tracking-[0.18em] text-faint-custom whitespace-nowrap mt-1">
               {EVENT.organizer}
             </span>
           </div>
         </Link>
 
         {/* Desktop links */}
-        <nav className="hidden items-center gap-9 font-mono-ui text-[13px] font-medium tracking-wide text-white/75 md:flex">
+        <nav className="hidden items-center gap-9 font-mono-ui text-[13px] font-medium tracking-wide text-muted-custom md:flex">
           {LINKS.map((l) => (
             <Link key={l.href} href={l.href} className="transition-colors hover:text-text">
               {l.label.toUpperCase()}
@@ -73,12 +73,14 @@ export default function Nav() {
         </nav>
 
         {/* Desktop register */}
-        <Link
-          href="/register"
+        <a
+          href="https://unstop.com/college-fests/agents-of-change-2026-acm-student-chapter-oist-483016"
+          target="_blank"
+          rel="noopener noreferrer"
           className="hidden md:inline-block rounded-full bg-[var(--color-text)] px-5 py-2.5 text-[13px] font-semibold text-[var(--color-base)] transition-transform hover:scale-105"
         >
           Register
-        </Link>
+        </a>
 
         {/* Mobile toggle */}
         <button
@@ -105,18 +107,20 @@ export default function Nav() {
                 key={l.href}
                 href={l.href}
                 onClick={() => setMobileOpen(false)}
-                className="font-mono-ui text-sm uppercase tracking-wide text-white/75 hover:text-text"
+                className="font-mono-ui text-sm uppercase tracking-wide text-muted-custom hover:text-text"
               >
                 {l.label}
               </Link>
             ))}
-            <Link
-              href="/register"
+            <a
+              href="https://unstop.com/college-fests/agents-of-change-2026-acm-student-chapter-oist-483016"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setMobileOpen(false)}
               className="w-full rounded-full bg-[var(--color-text)] px-4 py-2.5 text-center text-sm font-semibold text-[var(--color-base)]"
             >
               Register
-            </Link>
+            </a>
           </motion.div>
         )}
       </AnimatePresence>

@@ -47,7 +47,7 @@ export default function HomeClient() {
               <h2 className="mt-5 font-display text-5xl md:text-7xl font-black tracking-tight text-text uppercase leading-none max-w-3xl">
                 2-DAY WORKSHOP &<br />TEAM BUILDATHON
               </h2>
-              <p className="mt-6 max-w-xl text-base text-white/75 font-light">
+              <p className="mt-6 max-w-xl text-base text-muted-custom font-light">
                 Tentative schedule for the bootcamp and buildathon sessions
               </p>
 

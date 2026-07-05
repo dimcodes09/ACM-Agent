@@ -106,14 +106,10 @@ body {
 }
 
 /* ── Text color overrides ────────────────────────────────────
-   Tailwind v4 generates opacity variants with color-mix(in oklab)
-   which can fail silently in some browsers. These rgba fallbacks
-   guarantee visibility on the dark backgrounds.                 */
-.text-white\/75 { color: rgba(255, 255, 255, 0.75) !important; }
-.text-white\/70 { color: rgba(255, 255, 255, 0.70) !important; }
-.text-white\/55 { color: rgba(255, 255, 255, 0.55) !important; }
-.text-white\/50 { color: rgba(255, 255, 255, 0.50) !important; }
-.text-white\/40 { color: rgba(255, 255, 255, 0.40) !important; }
-.text-white\/35 { color: rgba(255, 255, 255, 0.35) !important; }
-.text-white\/30 { color: rgba(255, 255, 255, 0.30) !important; }
-.text-white\/25 { color: rgba(255, 255, 255, 0.25) !important; }
+   Using custom non-clashing classes to completely bypass Tailwind v4
+   utility compiler issues and color-mix browser rendering bugs.   */
+.text-muted-custom { color: rgba(255, 255, 255, 0.75) !important; }
+.text-faint-custom { color: rgba(255, 255, 255, 0.55) !important; }
+.text-faint-custom-40 { color: rgba(255, 255, 255, 0.40) !important; }
+.text-faint-custom-30 { color: rgba(255, 255, 255, 0.30) !important; }
+.text-faint-custom-25 { color: rgba(255, 255, 255, 0.25) !important; }

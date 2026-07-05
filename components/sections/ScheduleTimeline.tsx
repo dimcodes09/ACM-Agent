@@ -67,7 +67,7 @@ function DaySection({ day, isDay1 }: { day: DayBlock; isDay1: boolean }) {
                   {day.date.toUpperCase()}
                 </p>
               </div>
-              <span className="font-mono-ui text-[10px] tracking-[0.2em] text-white/75 uppercase bg-base/60 border border-border rounded-full px-3 py-1 backdrop-blur-sm">
+              <span className="font-mono-ui text-[10px] tracking-[0.2em] text-muted-custom uppercase bg-base/60 border border-border rounded-full px-3 py-1 backdrop-blur-sm">
                 {isDay1 ? "OIST Campus" : "Finale"}
               </span>
             </div>
@@ -171,14 +171,14 @@ function TimelineItem({
         transition={{ duration: 0.3 }}
       >
         <span className={`font-mono-ui text-xs font-semibold ${
-          active ? "text-signal" : "text-white/55"
+          active ? "text-signal" : "text-faint-custom"
         }`}>
           {time}
         </span>
         
         {/* Formatted Title (using Anton font) */}
         <h4 className={`mt-1.5 font-display text-lg md:text-xl font-bold tracking-tight uppercase leading-none transition-colors duration-300 ${
-          active ? "text-text" : "text-white/75"
+          active ? "text-text" : "text-muted-custom"
         }`}>
           {title}
         </h4>
@@ -186,14 +186,14 @@ function TimelineItem({
         {/* Optional Description (using Inter font) */}
         {desc && (
           <p className={`mt-2.5 text-sm font-light leading-relaxed transition-colors duration-300 ${
-            active ? "text-white/75" : "text-white/55"
+            active ? "text-muted-custom" : "text-faint-custom"
           }`}>
             {desc}
           </p>
         )}
         
         {/* Subtle coordinate marker */}
-        <div className="absolute bottom-3 right-4 font-mono-ui text-[8px] text-white/55 opacity-0 group-hover:opacity-60 transition-opacity duration-300">
+        <div className="absolute bottom-3 right-4 font-mono-ui text-[8px] text-faint-custom opacity-0 group-hover:opacity-60 transition-opacity duration-300">
           SEC // {time.replace(/[:–]/g, "")}
         </div>
       </motion.div>

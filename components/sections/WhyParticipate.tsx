@@ -27,7 +27,7 @@ export default function WhyParticipate() {
           <h2 className="mt-4 font-display text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-text uppercase leading-none">
             WHY PARTICIPATE?
           </h2>
-          <p className="mt-6 text-sm md:text-base leading-relaxed font-light max-w-2xl mx-auto" style={{ color: 'rgba(255,255,255,0.75)' }}>
+          <p className="mt-6 text-sm md:text-base leading-relaxed text-muted-custom font-light max-w-2xl mx-auto">
             Build, validate, present, and connect inside one of Bhopal&apos;s flagship national-level innovation platforms
           </p>
         </Reveal>
@@ -68,7 +68,7 @@ export default function WhyParticipate() {
                   <h3 className="font-display text-2xl font-black text-white uppercase leading-[1.1] tracking-tight group-hover:text-signal transition-colors duration-300">
                     {benefit.title}
                   </h3>
-                  <p className="text-xs leading-relaxed font-light transition-colors duration-300" style={{ color: 'rgba(255,255,255,0.70)' }}>
+                  <p className="text-xs leading-relaxed text-muted-custom font-light transition-colors duration-300">
                     {benefit.description}
                   </p>
                 </div>

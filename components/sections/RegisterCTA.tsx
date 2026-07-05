@@ -47,7 +47,7 @@ export default function RegisterCTA() {
             Reserve your spot.
           </h2>
 
-          <div className="mt-8 flex flex-wrap justify-center gap-x-8 gap-y-3 font-mono-ui text-xs text-white/75 tracking-wider uppercase">
+          <div className="mt-8 flex flex-wrap justify-center gap-x-8 gap-y-3 font-mono-ui text-xs text-muted-custom tracking-wider uppercase">
             <Fact label="Dates" value={EVENT.dates} />
             <Fact label="Organizer" value={EVENT.organizer} />
             <Fact label="Format" value={EVENT.format} />
@@ -58,7 +58,9 @@ export default function RegisterCTA() {
               ref={buttonRef}
               onMouseMove={handleButtonMouseMove}
               onMouseLeave={handleButtonMouseLeave}
-              href="/register"
+              href="https://unstop.com/college-fests/agents-of-change-2026-acm-student-chapter-oist-483016"
+              target="_blank"
+              rel="noopener noreferrer"
               animate={{ x: coords.x, y: coords.y }}
               transition={{ type: "spring", stiffness: 180, damping: 15, mass: 0.1 }}
               className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full bg-[var(--color-text)] px-9 py-4.5 font-bold text-[var(--color-base)] transition-shadow duration-300 hover:shadow-xl"
@@ -72,7 +74,7 @@ export default function RegisterCTA() {
               </span>
             </motion.a>
           </div>
-          <p className="mt-5 text-[9px] font-mono-ui tracking-widest text-white/55 uppercase select-none">
+          <p className="mt-5 text-[9px] font-mono-ui tracking-widest text-faint-custom uppercase select-none">
             // Registration link routes to the official event form.
           </p>
         </Reveal>
@@ -84,7 +86,7 @@ export default function RegisterCTA() {
 function Fact({ label, value }: { label: string; value: string }) {
   return (
     <span>
-      <span className="text-white/55">{label}: </span>
+      <span className="text-faint-custom">{label}: </span>
       <span className="text-text">{value}</span>
     </span>
   );

@@ -41,7 +41,7 @@ export default function FAQ() {
                     className="flex w-full items-center justify-between gap-6 px-6 py-5 text-left outline-none cursor-pointer"
                   >
                     <span className={`font-display text-base md:text-lg font-bold tracking-tight uppercase transition-colors duration-300 ${
-                      isOpen ? "text-text" : "text-white/75"
+                      isOpen ? "text-text" : "text-muted-custom"
                     }`}>
                       {faq.q}
                     </span>
@@ -50,7 +50,7 @@ export default function FAQ() {
                       transition={{ duration: 0.2, ease: "easeOut" }}
                       className="shrink-0 flex h-6 w-6 items-center justify-center rounded-full border border-border bg-surface-raised"
                     >
-                      <span className="text-sm font-light text-white/75" aria-hidden>
+                      <span className="text-sm font-light text-muted-custom" aria-hidden>
                         +
                       </span>
                     </motion.div>
@@ -64,7 +64,7 @@ export default function FAQ() {
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
                       >
-                        <div className="border-t border-border/40 px-6 pb-5 pt-4 text-sm leading-relaxed text-white/75 font-light">
+                        <div className="border-t border-border/40 px-6 pb-5 pt-4 text-sm leading-relaxed text-muted-custom font-light">
                           {faq.a}
                         </div>
                       </motion.div>

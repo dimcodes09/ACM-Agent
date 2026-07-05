@@ -19,10 +19,10 @@ export default function BuildathonTheme() {
         <Reveal>
           <div className="relative overflow-hidden rounded-[28px] border border-border bg-gradient-to-br from-[var(--color-surface-raised)]/70 to-[var(--color-surface)] p-8 sm:p-14 backdrop-blur-sm shadow-2xl">
             {/* Minimal blueprint boundary decoration */}
-            <div className="absolute left-6 top-5 font-mono-ui text-[8px] tracking-wider text-white/55 select-none">
+            <div className="absolute left-6 top-5 font-mono-ui text-[8px] tracking-wider text-faint-custom select-none">
               SYS // BUILDATHON_SPEC_v2.0
             </div>
-            <div className="absolute right-6 top-5 font-mono-ui text-[8px] tracking-wider text-white/55 select-none">
+            <div className="absolute right-6 top-5 font-mono-ui text-[8px] tracking-wider text-faint-custom select-none">
               GRID // STAGE_C
             </div>
 
@@ -34,7 +34,7 @@ export default function BuildathonTheme() {
                 <h2 className="mt-4 font-display text-4xl font-black tracking-tight text-text sm:text-6xl uppercase leading-none">
                   {BUILDATHON_THEME.title}
                 </h2>
-                <p className="mt-6 max-w-xl text-sm md:text-base leading-relaxed text-white/75 font-light">
+                <p className="mt-6 max-w-xl text-sm md:text-base leading-relaxed text-muted-custom font-light">
                   {BUILDATHON_THEME.description}
                 </p>
 
@@ -42,7 +42,7 @@ export default function BuildathonTheme() {
                   {BUILDATHON_THEME.capabilities.map((c) => (
                     <div
                       key={c}
-                      className="rounded-2xl border border-border bg-base/50 px-5 py-4 text-xs font-semibold font-mono-ui text-white/75 hover:border-border-hover hover:text-text transition-colors duration-300 flex items-center gap-3"
+                      className="rounded-2xl border border-border bg-base/50 px-5 py-4 text-xs font-semibold font-mono-ui text-muted-custom hover:border-border-hover hover:text-text transition-colors duration-300 flex items-center gap-3"
                     >
                       <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-active)]" />
                       {c.toUpperCase()}
@@ -61,7 +61,7 @@ export default function BuildathonTheme() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-base)]/20 to-transparent" />
                 </div>
-                <div className="mt-3 px-3 pb-2 flex justify-between items-center font-mono-ui text-[9px] tracking-wider text-white/55 uppercase">
+                <div className="mt-3 px-3 pb-2 flex justify-between items-center font-mono-ui text-[9px] tracking-wider text-faint-custom uppercase">
                   <span>Figure 02 // Whiteboard Session</span>
                   <span>OIST_LAB_2026</span>
                 </div>
