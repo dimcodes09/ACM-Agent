@@ -1,33 +1,66 @@
-# Agents of Change — National Agentic AI Bootcamp & Buildathon
+# Agents of Change
 
-Official website for OIST ACM-W's Agentic AI Bootcamp & Buildathon (10–11 July 2026).
+Official website for **Agents of Change**, a National Agentic AI Bootcamp & Buildathon organized by **OIST ACM-W Student Chapter**.
 
-## Stack
-- Next.js (App Router) + TypeScript
+The website is designed as a modern conference landing page featuring immersive storytelling, premium UI, smooth animations, and an intuitive registration experience.
+
+## Features
+
+- Modern conference-style landing page
+- Smooth scrolling with Lenis
+- Interactive animations using Framer Motion
+- Responsive design
+- Event schedule
+- Registration page
+- Learning outcomes
+- Buildathon theme showcase
+- Contact & venue section
+- Premium dark UI inspired by leading tech conferences
+
+## Tech Stack
+
+- Next.js (App Router)
+- TypeScript
 - Tailwind CSS v4
-- Framer Motion (primary animation)
-- Lenis (smooth scroll)
+- Framer Motion
+- Lenis
+- Lucide Icons
 
-## Structure
-```
-app/                  routes (home, register, schedule)
+## Project Structure
+
+```text
+app/
 components/
-  loader/             AgentBootLoader — CLI-style boot sequence
-  sections/           Page sections (Hero, About, Timeline, ...)
-  ui/                 Reusable primitives
-  HomeClient.tsx       Orchestrates loader -> hero handoff
-  SmoothScrollProvider.tsx  Lenis wrapper, respects prefers-reduced-motion
-data/event.ts          Single source of truth for all event content
-                        (sourced only from the provided event document)
-lib/utils.ts            cn() class merge helper
+components/sections/
+components/ui/
+data/
+lib/
+public/
 ```
 
-## Run locally
-```
+## Getting Started
+
+```bash
 npm install
 npm run dev
 ```
 
-## Status
-Phase 1 (this delivery): project scaffold, design tokens, AgentBootLoader, Hero.
-Remaining sections are being built next — see chat for the full section list.
+Visit:
+
+```
+http://localhost:3000
+```
+
+## Organization
+
+Developed for
+
+**OIST ACM-W Student Chapter**
+
+National Agentic AI Bootcamp & Buildathon
+
+10–11 July 2026
+
+## License
+
+This project was developed for the OIST ACM-W Student Chapter.
