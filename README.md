@@ -1,6 +1,6 @@
 # Agents of Change — National Agentic AI Bootcamp & Buildathon
 
-Official website for OIST ACM-W's Agentic AI Bootcamp & Buildathon (10–11 July 2026).
+Official website for OIST ACM & OIST ACM-W's Agentic AI Bootcamp & Buildathon (10–11 July 2026).
 
 ## Stack
 - Next.js (App Router) + TypeScript

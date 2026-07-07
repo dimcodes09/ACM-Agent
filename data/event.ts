@@ -6,7 +6,7 @@
 export const EVENT = {
   name: "Agents of Change",
   subtitle: "National Agentic AI Bootcamp & Buildathon",
-  organizer: "ACM and ACM-W Student Chapter",
+  organizer: "OIST ACM and ACM-W Student Chapter",
   dates: "10–11 July 2026",
   format: "1-Day Workshop + 1-Day Buildathon",
 } as const;
@@ -132,7 +132,7 @@ export const WHY_PARTICIPATE = [
     description: "Create opportunities for internships, placements, startup visibility, and industry-academia collaboration.",
   },
   {
-    title: "ACM OIST Community",
+    title: "OIST ACM Community",
     description: "Join a long-term builder community built around deep-tech, product thinking, and real-world problem solving.",
   },
 ] as const;
@@ -168,5 +168,5 @@ export const FAQS = [
 ] as const;
 
 export const CONTACT = {
-  organizer: "ACM and ACM-W Student Chapter",
+  organizer: "OIST ACM and OIST ACM-W Student Chapter",
 } as const;

@@ -48,7 +48,7 @@ export default function Contact() {
           </h2>
           <p className="mt-5 max-w-md text-sm md:text-base leading-relaxed text-muted-custom font-light">
             For questions about the bootcamp, team buildathon, or registration procedures,
-            reach out to the ACM and ACM-W Student Chapter.
+            reach out to the OIST ACM and OIST ACM-W Student Chapter.
           </p>
         </Reveal>
 
@@ -151,7 +151,7 @@ export default function Contact() {
                           Chapter
                         </div>
                         <div className="mt-0.5 text-sm font-medium text-white">
-                          ACM and ACM-W Student Chapter
+                          OIST ACM and OIST ACM-W Student Chapter
                         </div>
                       </div>
                     </div>

@@ -149,7 +149,7 @@ export default function AgentBootLoader({
               </div>
               <div className="flex flex-col sm:items-end gap-3.5">
                 <span className="text-[9px] tracking-[0.25em] text-faint-custom-40 uppercase font-semibold">
-                  ACM EVENT SYSTEM BOOT
+                  OIST ACM EVENT SYSTEM BOOT
                 </span>
                  <div className="flex items-center gap-3 mt-1">
                   <div className="flex items-center -space-x-3 h-10 flex-shrink-0">
@@ -218,7 +218,7 @@ export default function AgentBootLoader({
 
         {/* Footer info below terminal */}
         <div className="w-full flex flex-col sm:flex-row items-center justify-between gap-3 text-[9px] tracking-[0.2em] text-faint-custom-30 uppercase font-mono-ui">
-          <span>ACM & ACM-W STUDENT CHAPTER X AGENTS OF CHANGE 2026</span>
+          <span>OIST ACM & OIST ACM-W STUDENT CHAPTER X AGENTS OF CHANGE 2026</span>
           <span className="opacity-75">Press any key or click anywhere to skip</span>
         </div>
       </div>

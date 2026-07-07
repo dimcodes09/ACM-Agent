@@ -149,7 +149,7 @@ export default function Hero() {
 
         <motion.div variants={item} className="mt-10">
           <a
-            href="https://unstop.com/college-fests/agents-of-change-2026-acm-student-chapter-oist-483016"
+            href="https://forms.gle/WSjKHhaPYahWH6g67"
             target="_blank"
             rel="noopener noreferrer"
             className="group relative inline-flex items-center gap-2.5 rounded-full bg-[var(--color-text)] px-8 py-4 font-semibold text-[var(--color-base)] transition-transform duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-lg"
@@ -195,7 +195,7 @@ export default function Hero() {
           ))}
         </div>
         <span className="font-mono-ui text-[10px] sm:text-[11px] uppercase tracking-[0.1em] text-muted-custom text-left">
-          Hosted at OIST Campus, Bhopal — by the ACM and ACM-W Student Chapter
+          Hosted at OIST Campus, Bhopal — by the OIST ACM and OIST ACM-W Student Chapter
         </span>
       </div>
     </section>

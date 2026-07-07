@@ -58,7 +58,7 @@ export default function RegisterCTA() {
               ref={buttonRef}
               onMouseMove={handleButtonMouseMove}
               onMouseLeave={handleButtonMouseLeave}
-              href="https://unstop.com/college-fests/agents-of-change-2026-acm-student-chapter-oist-483016"
+              href="https://forms.gle/WSjKHhaPYahWH6g67"
               target="_blank"
               rel="noopener noreferrer"
               animate={{ x: coords.x, y: coords.y }}

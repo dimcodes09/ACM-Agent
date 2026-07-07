@@ -24,12 +24,12 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Agents of Change | National Agentic AI Bootcamp & Buildathon",
   description:
-    "An Agentic AI Bootcamp and Buildathon (1-day Workshop & 1-day Buildathon) organized by ACM and ACM-W Student Chapter — learn to build multi-agent AI systems with LLMs, RAG, and tool calling, then compete to build the Campus AI Assistant. 10–11 July 2026.",
+    "An Agentic AI Bootcamp and Buildathon (1-day Workshop & 1-day Buildathon) organized by OIST ACM and OIST ACM-W Student Chapter — learn to build multi-agent AI systems with LLMs, RAG, and tool calling, then compete to build the Campus AI Assistant. 10–11 July 2026.",
   metadataBase: new URL("https://agentsofchange.oistacmw.org"),
   openGraph: {
     title: "Agents of Change — National Agentic AI Bootcamp & Buildathon",
     description:
-      "1-day Agentic AI workshop + 1-day team buildathon. Organized by ACM and ACM-W Student Chapter. 10–11 July 2026.",
+      "1-day Agentic AI workshop + 1-day team buildathon. Organized by OIST ACM and OIST ACM-W Student Chapter. 10–11 July 2026.",
     type: "website",
   },
 };

@@ -77,7 +77,7 @@ export default function Nav() {
 
         {/* Desktop register */}
         <a
-          href="https://unstop.com/college-fests/agents-of-change-2026-acm-student-chapter-oist-483016"
+          href="https://forms.gle/WSjKHhaPYahWH6g67 "
           target="_blank"
           rel="noopener noreferrer"
           className="hidden md:inline-block rounded-full bg-[var(--color-text)] px-5 py-2.5 text-[13px] font-semibold text-[var(--color-base)] transition-transform hover:scale-105"
