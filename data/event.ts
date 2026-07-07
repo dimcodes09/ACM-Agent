@@ -6,7 +6,7 @@
 export const EVENT = {
   name: "Agents of Change",
   subtitle: "National Agentic AI Bootcamp & Buildathon",
-  organizer: "OIST ACM and ACM-W Student Chapter",
+  organizer: "OIST ACM & ACM-W Student Chapter",
   dates: "10–11 July 2026",
   format: "1-Day Workshop + 1-Day Buildathon",
 } as const;
