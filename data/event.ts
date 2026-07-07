@@ -142,6 +142,10 @@ export const WHY_PARTICIPATE = [
 // functional — replace with OIST ACM-W's actual answers before launch.
 export const FAQS = [
   {
+    q: "What is the registration fee?",
+    a: "Registration Fee: ₹399 per team (₹299 per team for ACM Members), ₹199 for solo participants.",
+  },
+  {
     q: "Who can participate?",
     a: "Open to all students interested in AI and software development — no prior professional experience required.",
   },
